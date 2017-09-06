@@ -7,27 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91cd9c7d-ee33-4df2-93df-b2cc20ff7eef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Bukkit/apir6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Bukkit/bukkitapi.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/Bukkit/craftbukkit.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/BlockListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/EnchantmentListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/EntityListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/InventoryListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/JsCommand.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/JsCommandExecutor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/PlayerListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/PlugJS.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/ScriptManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/ServerListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/SpoutListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/VehicleListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/WeatherListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/conji/plugjs/WorldListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/net/connorcpu/plugjs/PaintingListener.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/plugin.yml" afterPath="$PROJECT_DIR$/src/plugin.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,11 +19,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="EntityListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EntityListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/EntityListener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
               <caret line="131" column="89" lean-forward="false" selection-start-line="131" selection-start-column="89" selection-end-line="131" selection-end-column="89" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -120,6 +110,7 @@
         <option value="$PROJECT_DIR$/src/net/conji/thiq/listeners/WorldListener.java" />
         <option value="$PROJECT_DIR$/src/net/conji/thiq/listeners/BlockListener.java" />
         <option value="$PROJECT_DIR$/src/net/conji/thiq/listeners/EntityListener.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -412,14 +403,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="12" lean-forward="true" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/PlugJS.java" />
     <entry file="jar://$PROJECT_DIR$/lib/spigot.jar!/org/bukkit/Server.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -701,6 +684,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="131" column="89" lean-forward="false" selection-start-line="131" selection-start-column="89" selection-end-line="131" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="6" lean-forward="false" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding />
         </state>
       </provider>

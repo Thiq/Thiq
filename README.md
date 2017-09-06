@@ -1,1 +1,1 @@
-PlugJS
+# Thiq
