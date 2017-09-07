@@ -42,6 +42,11 @@ public class InventoryListener implements Listener {
     public void Brew(BrewEvent event) {
         RaiseEvent("brew", event);
     }
+
+    @EventHandler
+    public void BrewingStandFuel(BrewingStandFuelEvent event) {
+        RaiseEvent("brewingStandFuel", event);
+    }
     
     @EventHandler
     public void CraftItem(CraftItemEvent event) {
@@ -51,6 +56,11 @@ public class InventoryListener implements Listener {
     @EventHandler
     public void FurnaceBurn(FurnaceBurnEvent event) {
         RaiseEvent("burn", event);
+    }
+
+    @EventHandler
+    public void FurnaceExtract(FurnaceExtractEvent event) {
+        RaiseEvent("furnaceExtract", event);
     }
     
     @EventHandler
@@ -67,12 +77,42 @@ public class InventoryListener implements Listener {
     public void Close(InventoryCloseEvent event) {
         RaiseEvent("close", event);
     }
+
+    @EventHandler
+    public void Creative(InventoryCreativeEvent event) {
+        RaiseEvent("creative", event);
+    }
+
+    @EventHandler
+    public void Drag(InventoryDragEvent event) {
+        RaiseEvent("drag", event);
+    }
+
+    @EventHandler
+    public void Interact(InventoryInteractEvent event) {
+        RaiseEvent("interact", event);
+    }
+
+    @EventHandler
+    public void MoveItem(InventoryMoveItemEvent event) {
+        RaiseEvent("moveItem", event);
+    }
+
+    @EventHandler
+    public void PickupItem(InventoryPickupItemEvent event) {
+        RaiseEvent("pickupItem", event);
+    }
     
     @EventHandler
     public void Open(InventoryOpenEvent event) {
         RaiseEvent("open", event);
     }
-    
+
+    @EventHandler
+    public void PrepareAnvil(PrepareAnvilEvent event) {
+        RaiseEvent("prepareAnvil", event);
+    }
+
     @EventHandler
     public void PrepareItemCraft(PrepareItemCraftEvent event) {
         RaiseEvent("prepareCraft", event);

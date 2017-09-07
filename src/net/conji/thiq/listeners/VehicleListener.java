@@ -82,4 +82,9 @@ public class VehicleListener implements Listener {
     public void Move(VehicleMoveEvent event) {
         RaiseEvent("move", event);
     }
+
+    @EventHandler
+    public void Update(VehicleUpdateEvent event) {
+        RaiseEvent("update", event);
+    }
 }

@@ -13,6 +13,7 @@ import net.conji.thiq.Thiq;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.*;
+import org.bukkit.event.Event;
 
 /**
  *
@@ -25,7 +26,7 @@ public class EntityListener implements Listener {
         plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
     
-    void RaiseEvent(String event, EntityEvent arg) {
+    void RaiseEvent(String event, Event arg) {
         Object handler = plugin.js.get("entity");
         if (handler == null) return;
         Invocable jsI = (Invocable) plugin.js;
@@ -38,16 +39,24 @@ public class EntityListener implements Listener {
     }
 
     @EventHandler
-    public void AreaEffectCloudApply(AreaEffectCloudApplyEvent event) { RaiseEvent("areaEffectCloudApply", event); }
+    public void AreaEffectCloudApply(AreaEffectCloudApplyEvent event) {
+        RaiseEvent("areaEffectCloudApply", event);
+    }
 
     @EventHandler
-    public void EnderDragonChangePhase(EnderDragonChangePhaseEvent event) { RaiseEvent("enderDragonChangePhase", event); }
+    public void EnderDragonChangePhase(EnderDragonChangePhaseEvent event) {
+        RaiseEvent("enderDragonChangePhase", event);
+    }
 
     @EventHandler
-    public void AirChange(EntityAirChangeEvent event) { RaiseEvent("airChange", event); }
+    public void AirChange(EntityAirChangeEvent event) {
+        RaiseEvent("airChange", event);
+    }
 
     @EventHandler
-    public void Breed(EntityBreedEvent event) { RaiseEvent("breed", event); }
+    public void Breed(EntityBreedEvent event) {
+        RaiseEvent("breed", event);
+    }
 
     @EventHandler
     public void CreatureSpawn(CreatureSpawnEvent event) {
@@ -75,10 +84,14 @@ public class EntityListener implements Listener {
     }
 
     @EventHandler
-    public void CombutByBlock(EntityCombustByBlockEvent event) { RaiseEvent("combustByBlock", event); }
+    public void CombutByBlock(EntityCombustByBlockEvent event) {
+        RaiseEvent("combustByBlock", event);
+    }
 
     @EventHandler
-    public void CombustByEntity(EntityCombustByEntityEvent event) { RaiseEvent("combustByEntity", event); }
+    public void CombustByEntity(EntityCombustByEntityEvent event) {
+        RaiseEvent("combustByEntity", event);
+    }
     
     @EventHandler
     public void CreatePortal(EntityCreatePortalEvent event) {
@@ -121,7 +134,9 @@ public class EntityListener implements Listener {
     }
 
     @EventHandler
-    public void PortalExit(EntityPortalExitEvent event) { RaiseEvent("portalExit", event); }
+    public void PortalExit(EntityPortalExitEvent event) {
+        RaiseEvent("portalExit", event);
+    }
     
     @EventHandler
     public void RegainHealth(EntityRegainHealthEvent event) {
@@ -129,7 +144,9 @@ public class EntityListener implements Listener {
     }
 
     @EventHandler
-    public void Resurrect(EntityResurrectEvent event) { RaiseEvent("resurrect", event); }
+    public void Resurrect(EntityResurrectEvent event) {
+        RaiseEvent("resurrect", event);
+    }
     
     @EventHandler
     public void ShootBow(EntityShootBowEvent event) {
@@ -165,6 +182,11 @@ public class EntityListener implements Listener {
     public void ExplosionPrime(ExplosionPrimeEvent event) {
         RaiseEvent("explosionPrime", event);
     }
+
+    @EventHandler
+    public void FireworkExplode(FireworkExplodeEvent event) {
+        RaiseEvent("fireworkExplode", event);
+    }
     
     @EventHandler
     public void FoodLevelChange(FoodLevelChangeEvent event) {
@@ -175,7 +197,17 @@ public class EntityListener implements Listener {
     public void ItemDespawn(ItemDespawnEvent event) {
         RaiseEvent("itemDespawn", event);
     }
-    
+
+    @EventHandler
+    public void HorseJump(HorseJumpEvent event) {
+        RaiseEvent("horseJump", event);
+    }
+
+    @EventHandler
+    public void ItemMerge(ItemMergeEvent event) {
+        RaiseEvent("itemMerge", event);
+    }
+
     @EventHandler
     public void ItemSpawn(ItemSpawnEvent event) {
         RaiseEvent("itemSpawn", event);
@@ -185,7 +217,22 @@ public class EntityListener implements Listener {
     public void PigZap(PigZapEvent event) {
         RaiseEvent("pigZap", event);
     }
-    
+
+    @EventHandler
+    public void LingeringPotionSplash(LingeringPotionSplashEvent event) {
+        RaiseEvent("lingeringPotionSplash", event);
+    }
+
+    @EventHandler
+    public void PlayerDeath(PlayerDeathEvent event) {
+        RaiseEvent("playerDeath", event);
+    }
+
+    @EventHandler
+    public void PlayerLeash(PlayerLeashEntityEvent event) {
+        RaiseEvent("playerLeashEntity", event);
+    }
+
     @EventHandler
     public void PotionSplash(PotionSplashEvent event) {
         RaiseEvent("potionSplash", event);
@@ -214,5 +261,20 @@ public class EntityListener implements Listener {
     @EventHandler
     public void SlimeSplit(SlimeSplitEvent event) {
         RaiseEvent("slimeSplit", event);
+    }
+
+    @EventHandler
+    public void SpawnerSpawn(SpawnerSpawnEvent event) {
+        RaiseEvent("spawnerSpawn", event);
+    }
+
+    @EventHandler
+    public void VillagerAcquireTrade(VillagerAcquireTradeEvent event) {
+        RaiseEvent("villagerAcquireTrade", event);
+    }
+
+    @EventHandler
+    public void VillagerReplenishTrade(VillagerReplenishTradeEvent event){
+        RaiseEvent("villagerReplenishTrade", event);
     }
 }

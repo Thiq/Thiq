@@ -37,7 +37,7 @@ public class ServerListener implements Listener {
         } catch (NoSuchMethodException ex) {
         }
     }
-    
+
     @EventHandler
     public void MapInitialize(MapInitializeEvent event) {
         RaiseEvent("mapInit", event);
@@ -76,5 +76,10 @@ public class ServerListener implements Listener {
     @EventHandler
     public void ServiceUnregister(ServiceUnregisterEvent event) {
         RaiseEvent("serviceUnregister", event);
+    }
+
+    @EventHandler
+    public void TabComplete(TabCompleteEvent event) {
+        RaiseEvent("tabComplete", event);
     }
 }

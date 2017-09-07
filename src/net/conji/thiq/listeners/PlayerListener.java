@@ -38,6 +38,16 @@ public class PlayerListener implements Listener {
         } catch (NoSuchMethodException ex) {
         }
     }
+
+    @EventHandler
+    public void AsyncChat(AsyncPlayerChatEvent event) {
+        RaiseEvent("asyncChat", event);
+    }
+
+    @EventHandler
+    public void AsyncPreLogin(AsyncPlayerPreLoginEvent event) {
+        RaiseEvent("asyncPreLogin", event);
+    }
     
     @EventHandler
     public void Death(PlayerDeathEvent event) {
@@ -48,7 +58,12 @@ public class PlayerListener implements Listener {
     public void Animation(PlayerAnimationEvent event) {
         RaiseEvent("animation", event);
     }
-    
+
+    @EventHandler
+    public void ArmorStandManiuplate(PlayerArmorStandManipulateEvent event) {
+        RaiseEvent("armorStandManipulate", event);
+    }
+
     @EventHandler
     public void BedEnter(PlayerBedEnterEvent event) {
         RaiseEvent("bedEnter", event);
@@ -68,7 +83,12 @@ public class PlayerListener implements Listener {
     public void BucketFill(PlayerBucketFillEvent event) {
         RaiseEvent("bucketFill", event);
     }
-    
+
+    @EventHandler
+    public void ChangedMainHand(PlayerChangedMainHandEvent event) {
+        RaiseEvent("changedMainHand", event);
+    }
+
     @EventHandler
     public void ChangedWorld(PlayerChangedWorldEvent event) {
         RaiseEvent("changedWorld", event);
@@ -77,6 +97,11 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void Chat(AsyncPlayerChatEvent event) {
         RaiseEvent("chat", event);
+    }
+
+    @EventHandler
+    public void ChatTabComplete(PlayerChatTabCompleteEvent event) {
+        RaiseEvent("chatTabComplete", event);
     }
     
     @EventHandler
@@ -88,7 +113,12 @@ public class PlayerListener implements Listener {
     public void DropItem(PlayerDropItemEvent event) {
         RaiseEvent("dropItem", event);
     }
-    
+
+    @EventHandler
+    public void EditBook(PlayerEditBookEvent event) {
+        RaiseEvent("editBook", event);
+    }
+
     @EventHandler
     public void EggThrow(PlayerEggThrowEvent event) {
         RaiseEvent("eggThrow", event);
@@ -108,7 +138,12 @@ public class PlayerListener implements Listener {
     public void GameMode(PlayerGameModeChangeEvent event) {
         RaiseEvent("gamemode", event);
     }
-    
+
+    @EventHandler
+    public void InteractAt(PlayerInteractAtEntityEvent event) {
+        RaiseEvent("interactAt", event);
+    }
+
     @EventHandler
     public void Interact(PlayerInteractEvent event) {
         RaiseEvent("interact", event);
@@ -118,7 +153,12 @@ public class PlayerListener implements Listener {
     public void InteractEntity(PlayerInteractEntityEvent event) {
         RaiseEvent("interactEntity", event);
     }
-    
+
+    @EventHandler
+    public void ItemBreak(PlayerItemBreakEvent event) {
+        RaiseEvent("itemBreak", event);
+    }
+
     @EventHandler
     public void ItemHeld(PlayerItemHeldEvent event) {
         RaiseEvent("itemHeld", event);
@@ -148,6 +188,11 @@ public class PlayerListener implements Listener {
     public void Move(PlayerMoveEvent event) {
         RaiseEvent("move", event);
     }
+
+    @EventHandler
+    public void PickupArrow(PlayerPickupArrowEvent event) {
+        RaiseEvent("pickupArrow", event);
+    }
     
     @EventHandler
     public void PickupItem(PlayerPickupItemEvent event) {
@@ -168,6 +213,16 @@ public class PlayerListener implements Listener {
     public void Quit(PlayerQuitEvent event) {
         RaiseEvent("quit", event);
     }
+
+    @EventHandler
+    public void RegisterChannel(PlayerRegisterChannelEvent event) {
+        RaiseEvent("registerChannel", event);
+    }
+
+    @EventHandler
+    public void ResourcePackStatus(PlayerResourcePackStatusEvent event) {
+        RaiseEvent("resourcePackStatus", event);
+    }
     
     @EventHandler
     public void Respawn(PlayerRespawnEvent event) {
@@ -178,12 +233,27 @@ public class PlayerListener implements Listener {
     public void ShearEntity(PlayerShearEntityEvent event) {
         RaiseEvent("shear", event);
     }
+
+    @EventHandler
+    public void StatisticIncrement(PlayerStatisticIncrementEvent event) {
+        RaiseEvent("statisticIncrement", event);
+    }
+
+    @EventHandler
+    public void Swap(PlayerSwapHandItemsEvent event) {
+        RaiseEvent("swapHandItems", event);
+    }
     
     @EventHandler
     public void Teleport(PlayerTeleportEvent event) {
         RaiseEvent("teleport", event);
     }
-    
+
+    @EventHandler
+    public void Flight(PlayerToggleFlightEvent event) {
+        RaiseEvent("flight", event);
+    }
+
     @EventHandler
     public void Sneak(PlayerToggleSneakEvent event) {
         RaiseEvent("sneak", event);
@@ -192,6 +262,16 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void Sprint(PlayerToggleSprintEvent event) {
         RaiseEvent("sprint", event);
+    }
+
+    @EventHandler
+    public void Unleash(PlayerUnleashEntityEvent event) {
+        RaiseEvent("unleash", event);
+    }
+
+    @EventHandler
+    public void UnregisterChannel(PlayerUnregisterChannelEvent event) {
+        RaiseEvent("unregisterChannel", event);
     }
     
     @EventHandler

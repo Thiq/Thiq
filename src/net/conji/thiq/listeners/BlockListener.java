@@ -58,19 +58,26 @@ public class BlockListener implements Listener {
         RaiseEvent("dispense", event);
     }
     @EventHandler
-    public void Exp(BlockExpEvent event) { RaiseEvent("exp", event); }
+    public void Exp(BlockExpEvent event) {
+        RaiseEvent("exp", event);
+    }
     @EventHandler
-    public void Explode(BlockExplodeEvent event) { RaiseEvent("explode", event); }
+    public void Explode(BlockExplodeEvent event) {
+        RaiseEvent("explode", event);
+    }
     @EventHandler
     public void Fade(BlockFadeEvent event) {
         RaiseEvent("fade", event);
     }
     @EventHandler
     public void Form(BlockFormEvent event) {
+
         RaiseEvent("form", event);
     }
     @EventHandler
-    public void FromTo(BlockFromToEvent event) { RaiseEvent("fromTo", event); }
+    public void FromTo(BlockFromToEvent event) {
+        RaiseEvent("fromTo", event);
+    }
     @EventHandler
     public void Grow(BlockGrowEvent event) {
         RaiseEvent("grow", event);
@@ -80,7 +87,9 @@ public class BlockListener implements Listener {
         RaiseEvent("ignite", event);
     }
     @EventHandler
-    public void MultiPlace(BlockMultiPlaceEvent event) { RaiseEvent("multiPlace", event); }
+    public void MultiPlace(BlockMultiPlaceEvent event) {
+        RaiseEvent("multiPlace", event);
+    }
     @EventHandler
     public void Physics(BlockPhysicsEvent event) {
         RaiseEvent("physics", event);
@@ -106,7 +115,9 @@ public class BlockListener implements Listener {
         RaiseEvent("spread", event);
     }
     @EventHandler
-    public void CauldronLevelChange(CauldronLevelChangeEvent event) { RaiseEvent("cauldronLevelChange", event); }
+    public void CauldronLevelChange(CauldronLevelChangeEvent event) {
+        RaiseEvent("cauldronLevelChange", event);
+    }
     @EventHandler
     public void EntityForm(EntityBlockFormEvent event) {
         RaiseEvent("entityForm", event);
@@ -116,7 +127,9 @@ public class BlockListener implements Listener {
         RaiseEvent("leavesDecay", event);
     }
     @EventHandler
-    public void NotePlay(NotePlayEvent event) { RaiseEvent("notePlay", event); }
+    public void NotePlay(NotePlayEvent event) {
+        RaiseEvent("notePlay", event);
+    }
     @EventHandler
     public void SignChange(SignChangeEvent event) {
         RaiseEvent("signChange", event);
