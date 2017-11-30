@@ -1,4 +1,4 @@
-# Thiq
+# Thiq ![](https://travis-ci.org/Thiq/Thiq.svg?branch=master)
 > A complete JavaScript loader and framework for the Spigot Server API.
 
 
