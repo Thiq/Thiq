@@ -9,9 +9,9 @@
 - Place Thiq.jar in the plugins folder
 - Create a folder named `Thiq`
 - Clone [the startup files repo](https://github.com/Thiq/thiq-scripts)
-- Clone [the core repo](https://github.com/Thiq/core] into the `core` folder**
-- Clone [the modules repo](https://github.com/Thiq/modules] into the `modules` folder**
-- Clone [the libs repo](https://github.com/Thiq/libs] into the `libs` folder**
+- Clone [the core repo](https://github.com/Thiq/core) into the `core` folder**
+- Clone [the modules repo](https://github.com/Thiq/modules) into the `modules` folder**
+- Clone [the libs repo](https://github.com/Thiq/libs) into the `libs` folder**
 
 ** _These steps will soon be automated_
 
