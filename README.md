@@ -1,7 +1,6 @@
 # Thiq
 > A complete JavaScript loader and framework for the Spigot Server API.
 
-One to two paragraph statement about your product and what it does.
 
 ![](thiq.png)
 
