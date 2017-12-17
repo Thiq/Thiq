@@ -1,9 +1,11 @@
 <component name="libraryTable">
   <library name="SpoutPlugin">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/SpoutPlugin.jar!/" />
+      <root url="jar://E:/Random Shit/MC Testing/spigot.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://E:/Random Shit/MC Testing/spigot.jar!/" />
+    </SOURCES>
   </library>
 </component>

@@ -6,20 +6,24 @@ package net.conji.thiq;
 
 import java.io.*;
 import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Vector;
+import java.net.URI;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.*;
+import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.script.*;
 
+import com.avaje.ebean.LogLevel;
+import jdk.nashorn.api.scripting.JSObject;
 import net.conji.thiq.listeners.*;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
 /**
  *
@@ -38,7 +42,6 @@ public class Thiq extends JavaPlugin {
     Listener vehicle;
     Listener weather;
     Listener world;
-    Listener spout;
     
     public void onEnable() {
         Reload(true);
@@ -52,10 +55,6 @@ public class Thiq extends JavaPlugin {
         vehicle = new VehicleListener(this);
         weather = new WeatherListener(this);
         world = new WorldListener(this);
-        
-        if (getServer().getPluginManager().getPlugin("Spout") != null) {
-            spout = new SpoutListener(this);
-        }
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -70,8 +69,26 @@ public class Thiq extends JavaPlugin {
             ScriptEngineManager sem = new ScriptEngineManager();
             js = sem.getEngineByName("JavaScript");
             js.put("persistence", persistence);
-            js.put("loader", new ScriptLoader());
+            js.put("loader", new ScriptLoader(js));
             js.put("engine", js);
+            try {
+                // in order for core-js to properly load, we need to temp defined "require" to assign to global variables.
+                // for now, it'll work like the essential
+                String coreJsPolyfill = getScript("corejs/shim.js");
+                String blobPolyfill = getScript("blob-polyfill.js");
+                String globalPolyfill = getScript("global-polyfill.js");
+                String babel = getScript("babel.js");
+                js.eval("function require(module) { return loader.crequire(module); }");
+                js.eval(blobPolyfill);
+                js.eval(globalPolyfill);
+                js.eval(babel);
+                js.eval("function eval(input) { return engine.eval(Babel.transform(input, { presets: [ 'es2015' ] }).code); }");
+                getLogger().log(Level.INFO, "Using Babel to compile ES2015.");
+            } catch (IOException ex) {
+                getLogger().log(Level.SEVERE, ex.getMessage());
+                js.eval("function eval(input) { return engine.eval(input); }");
+                getLogger().log(Level.INFO, "Could not locate ES2015 compiler. Using Nashorn's default compiler.");
+            }
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
             js.eval(new FileReader(getConfig().getString("script")));
@@ -86,7 +103,23 @@ public class Thiq extends JavaPlugin {
         return new JsCommandExecutor(name, description, usage, aliases, command);
     }
 
+    private String getScript(String name) throws IOException {
+        Path scriptLocation = Paths.get("./plugins/Thiq/" + name);
+        List<String> contents = Files.readAllLines(scriptLocation);
+        String result = "";
+        for (String line: contents) {
+            result += line + "\r\n";
+        }
+        return result;
+    }
+
     public class ScriptLoader {
+        ScriptEngine engine;
+
+        public ScriptLoader(ScriptEngine engine) {
+            this.engine = engine;
+        }
+
         public void Run(Object r) {
             Invocable inv = (Invocable) js;
             Runnable runnable = inv.getInterface(r, Runnable.class);
@@ -98,7 +131,19 @@ public class Thiq extends JavaPlugin {
         }
         public Server getServer() {return Thiq.this.getServer();}
         public Object load(String file) throws FileNotFoundException, ScriptException {
-            return js.eval(new FileReader(file));
+            try {
+                InputStreamReader stream = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
+                BufferedReader buffer = new BufferedReader(stream);
+                String line = null;
+                String result = "";
+                while ((line = buffer.readLine()) != null) {
+                    result += line + "\r\n";
+                }
+                return js.eval(result);
+            } catch (Exception ex) {
+                getLogger().log(Level.SEVERE, ex.toString());
+                return null;
+            }
         }
 
         public Class<?> findClass(String className) {
@@ -127,6 +172,14 @@ public class Thiq extends JavaPlugin {
                 return null;
             }
 
+        }
+
+        public void crequire(String module) throws Exception {
+            // if I ever have to hack shit like this again, I'm jumping in front of a train.
+            SimpleBindings bindings = new SimpleBindings();
+            String contents = getScript(module + ".js");
+            engine.eval(contents, bindings);
+            getLogger().log(Level.INFO, bindings.get("module").toString());
         }
     }
 }
