@@ -7,304 +7,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91cd9c7d-ee33-4df2-93df-b2cc20ff7eef" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/babel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/blob-polyfill.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/core-polyfill.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_a-function.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_a-number-value.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_add-to-unscopables.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_an-instance.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_an-object.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-copy-within.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-fill.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-from-iterable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-includes.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-methods.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-reduce.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-species-constructor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-species-create.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_bind.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_classof.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_cof.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_collection-strong.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_collection-to-json.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_collection-weak.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_collection.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_core.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_create-property.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_ctx.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_date-to-iso-string.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_date-to-primitive.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_defined.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_descriptors.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_dom-create.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_entry-virtual.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_enum-bug-keys.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_enum-keys.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_export.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_fails-is-regexp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_fails.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_fix-re-wks.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_flags.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_flatten-into-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_for-of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_global.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_has.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_hide.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_html.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_ie8-dom-define.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_inherit-if-required.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_invoke.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_iobject.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_is-array-iter.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_is-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_is-integer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_is-object.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_is-regexp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_iter-call.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_iter-create.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_iter-define.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_iter-detect.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_iter-step.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_iterators.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_keyof.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_library.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_math-expm1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_math-fround.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_math-log1p.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_math-scale.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_math-sign.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_meta.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_metadata.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_microtask.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_new-promise-capability.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-assign.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-create.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-define.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-dp.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-dps.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-forced-pam.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-gopd.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-gopn-ext.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-gopn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-gops.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-gpo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-keys-internal.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-keys.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-pie.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-sap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_object-to-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_own-keys.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_parse-float.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_parse-int.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_partial.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_path.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_perform.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_promise-resolve.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_property-desc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_redefine-all.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_redefine.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_replacer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_same-value.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_set-collection-from.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_set-collection-of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_set-proto.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_set-species.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_set-to-string-tag.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_shared-key.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_shared.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_species-constructor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_strict-method.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_string-at.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_string-context.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_string-html.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_string-pad.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_string-repeat.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_string-trim.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_string-ws.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_task.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_to-absolute-index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_to-index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_to-integer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_to-iobject.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_to-length.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_to-object.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_to-primitive.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_typed-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_typed-buffer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_typed.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_uid.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_user-agent.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_validate-collection.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_wks-define.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_wks-ext.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_wks.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.delay.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.dict.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.function.part.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.get-iterator-method.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.get-iterator.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.is-iterable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.number.iterator.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.object.classof.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.object.define.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.object.is-object.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.object.make.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.regexp.escape.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.string.escape-html.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/core.string.unescape-html.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es5.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.copy-within.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.every.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.fill.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.filter.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.find-index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.find.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.for-each.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.from.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.index-of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.is-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.iterator.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.join.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.last-index-of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.map.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.reduce-right.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.reduce.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.slice.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.some.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.sort.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.array.species.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.date.now.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.date.to-iso-string.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.date.to-json.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.date.to-primitive.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.date.to-string.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.function.bind.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.function.has-instance.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.function.name.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.map.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.acosh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.asinh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.atanh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.cbrt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.clz32.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.cosh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.expm1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.fround.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.hypot.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.imul.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.log10.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.log1p.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.log2.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.sign.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.sinh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.tanh.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.math.trunc.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.constructor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.epsilon.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.is-finite.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.is-integer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.is-nan.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.is-safe-integer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.max-safe-integer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.min-safe-integer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.parse-float.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.parse-int.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.to-fixed.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.number.to-precision.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.assign.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.create.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.define-properties.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.define-property.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.freeze.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.get-own-property-descriptor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.get-own-property-names.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.get-prototype-of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.is-extensible.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.is-frozen.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.is-sealed.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.is.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.keys.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.prevent-extensions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.seal.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.set-prototype-of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.to-string.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.parse-float.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.parse-int.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.promise.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.apply.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.construct.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.define-property.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.delete-property.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.enumerate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.get-own-property-descriptor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.get-prototype-of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.get.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.has.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.is-extensible.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.own-keys.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.prevent-extensions.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.set-prototype-of.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.reflect.set.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.regexp.constructor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.regexp.flags.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.regexp.match.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.regexp.replace.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.regexp.search.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.regexp.split.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.regexp.to-string.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.set.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.anchor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.big.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.blink.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.bold.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.code-point-at.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.ends-with.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.fixed.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.fontcolor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.fontsize.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.from-code-point.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.includes.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.italics.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.iterator.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.link.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.raw.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.repeat.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.small.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.starts-with.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.strike.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.sub.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.sup.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.string.trim.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.symbol.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.array-buffer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.data-view.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.float32-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.float64-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.int16-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.int32-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.int8-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.uint16-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.uint32-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.uint8-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.typed.uint8-clamped-array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.weak-map.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.weak-set.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/web.dom.iterable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/web.immediate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/web.timers.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/corejs/shim.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/global-polyfill.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/net/conji/thiq/js/require.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/SpoutPlugin.xml" afterPath="$PROJECT_DIR$/.idea/libraries/SpoutPlugin.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Thiq/.gitattributes" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/production/Thiq/.gitignore" afterPath="$PROJECT_DIR$/out/production/Thiq/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/out/production/Thiq/.idea/libraries/SpoutPlugin.xml" afterPath="$PROJECT_DIR$/out/production/Thiq/.idea/libraries/SpoutPlugin.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Thiq/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Thiq/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/net/conji/thiq/Thiq.java" afterPath="$PROJECT_DIR$/src/net/conji/thiq/Thiq.java" />
-      <change beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/SpoutListener.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/spigot.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/commands.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/data.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/events.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/lang.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/loader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/logger.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/permissions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/process.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/promise.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/require.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/safety.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/thiq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/tts.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/core/types.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/resources/plugin.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SpoutPlugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/artifacts/PlugJS_jar.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/libraries/Bukkit.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/libraries/SpoutPlugin.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/libraries/org_netbeans_modules_java_j2seproject_copylibstask.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/PlugJS.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/build.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/lib/nblibraries.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/nbproject/build-impl.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/nbproject/genfiles.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/nbproject/private/private.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/nbproject/private/private.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/nbproject/project.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/nbproject/project.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/plugin.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/src/META-INF/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/src/plugin.yml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/JsCommand.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/JsCommand.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/JsCommandExecutor.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/JsCommandExecutor.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/ReflectionUtils.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/ReflectionUtils.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/ScriptManager.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/ScriptManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/Thiq.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/Thiq.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/BlockListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/BlockListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/EnchantmentListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/EnchantmentListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/EntityListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/EntityListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/HangingListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/HangingListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/InventoryListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/InventoryListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/PlayerListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/PlayerListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/ServerListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/ServerListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/VehicleListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/VehicleListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/WeatherListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/WeatherListener.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/net/conji/thiq/listeners/WorldListener.java" afterPath="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/WorldListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Thiq.iml" afterPath="$PROJECT_DIR$/Thiq.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -315,90 +78,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Thiq.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/Thiq.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="116" column="78" lean-forward="false" selection-start-line="116" selection-start-column="78" selection-end-line="116" selection-end-column="78" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#4863#4864#0" expanded="true" />
-                    <element signature="e#4907#4908#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_array-copy-within.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-copy-within.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="core-polyfill.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/core-polyfill.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="es6.object.create.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.create.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="babel.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/babel.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="9044">
-                  <caret line="18" column="4688" lean-forward="false" selection-start-line="18" selection-start-column="4688" selection-end-line="18" selection-end-column="4688" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="global-polyfill.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/global-polyfill.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="es5.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es5.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Thiq.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/Thiq.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="675">
+              <caret line="89" column="26" lean-forward="false" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -415,6 +108,7 @@
       <find>services</find>
       <find>put</find>
       <find>PlugJS</find>
+      <find>main.java.</find>
     </findStrings>
     <replaceStrings>
       <replace>Conji</replace>
@@ -432,18 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/JsCommand.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/BlockListener.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/EnchantmentListener.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/EntityListener.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/InventoryListener.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/JsCommandExecutor.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/PaintingListener.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/PlayerListener.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/ScriptManager.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/ServerListener.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/SpoutListener.java" />
-        <option value="$PROJECT_DIR$/src/net/conji/plugjs/VehicleListener.java" />
         <option value="$PROJECT_DIR$/src/net/conji/plugjs/WeatherListener.java" />
         <option value="$PROJECT_DIR$/src/net/conji/plugjs/WorldListener.java" />
         <option value="$PROJECT_DIR$/lib/spigot.jar!/org/bukkit/plugin/java/JavaPlugin.class" />
@@ -480,14 +162,28 @@
         <option value="$PROJECT_DIR$/src/net/conji/thiq/js/require.js" />
         <option value="$PROJECT_DIR$/src/net/conji/thiq/js/crequire.js" />
         <option value="$PROJECT_DIR$/src/net/conji/thiq/Thiq.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/Thiq.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/JsCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/JsCommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/ReflectionUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/ScriptManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/BlockListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/EnchantmentListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/EntityListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/InventoryListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/ServerListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/WeatherListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/PlayerListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/VehicleListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/WorldListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/thiq/net/conji/Thiq.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
+    <option name="x" value="-7" />
+    <option name="width" value="1294" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -507,7 +203,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PlugJS" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Thiq" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -524,29 +230,20 @@
               <item name="Thiq" type="b2602c69:ProjectViewProjectNode" />
               <item name="Thiq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thiq" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Thiq" type="b2602c69:ProjectViewProjectNode" />
               <item name="Thiq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thiq" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="conji" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Thiq" type="b2602c69:ProjectViewProjectNode" />
               <item name="Thiq" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thiq" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="corejs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Thiq" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Thiq" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="thiq" type="462c0819:PsiDirectoryNode" />
-              <item name="listeners" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Thiq" type="b2602c69:ProjectViewProjectNode" />
@@ -556,7 +253,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -573,22 +269,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PlugJS" type="58d84e3e:PackageViewProjectNode" />
-              <item name="Thiq" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/Random Shit/MC Testing/spigot.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/MC Testing/spigot.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src" />
@@ -598,6 +285,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dubst\Documents\Thiq\src\resources" />
       <recent name="C:\Users\Brian\Documents\Thiq\src\net\conji\thiq\js" />
       <recent name="C:\Users\Brian\Documents\Thiq\src\net\conji\thiq\js\corejs" />
     </key>
@@ -615,6 +303,17 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration name="Unnamed" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+    </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -668,16 +367,11 @@
       <module name="PlugJS" />
       <envs />
     </configuration>
-    <configuration name="Unnamed" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="5005" />
-        <option name="LOCAL" value="false" />
-      </RunnerSettings>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -713,12 +407,6 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -737,35 +425,35 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39908257" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3988985" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31651375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14904611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20104167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39908257" sideWeight="0.49791667" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -800,8 +488,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/InventoryListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/PlayerListener.java" />
     <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/VehicleListener.java" />
     <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/WorldListener.java" />
     <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/WeatherListener.java" />
@@ -816,27 +502,6 @@
     <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/PlugJS.java" />
     <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/JsCommandExecutor.java" />
     <entry file="file://$PROJECT_DIR$/src/net/conji/plugjs/JsCommand.java" />
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/JsCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/JsCommandExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/ScriptManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-969">
@@ -859,20 +524,6 @@
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/java/lang/Class.java" />
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/ReflectionUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/EnchantmentListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -880,14 +531,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/BlockListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="88" lean-forward="true" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/HangingListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/HangingListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="46" column="35" lean-forward="false" selection-start-line="46" selection-start-column="35" selection-end-line="46" selection-end-column="35" />
@@ -895,155 +539,439 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/PaintingListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/InventoryListener.java">
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/SpoutListener.java" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/babel.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/global-polyfill.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/require.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/crequire.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es5.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_a-function.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-from-iterable.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_an-instance.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-species-create.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-copy-within.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/core-polyfill.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_export.js" />
+    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.create.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/ReflectionUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="112" column="42" lean-forward="false" selection-start-line="112" selection-start-column="42" selection-end-line="112" selection-end-column="42" />
+        <state relative-caret-position="0">
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/PlayerListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/EnchantmentListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="262" column="21" lean-forward="false" selection-start-line="262" selection-start-column="21" selection-end-line="262" selection-end-column="21" />
+        <state relative-caret-position="200">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/ServerListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/BlockListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="82" column="41" lean-forward="false" selection-start-line="82" selection-start-column="41" selection-end-line="82" selection-end-column="41" />
+        <state relative-caret-position="198">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/VehicleListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="87" column="36" lean-forward="false" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/WeatherListener.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/EntityListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/WorldListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-569">
-          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/EntityListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/listeners/SpoutListener.java" />
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/babel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9044">
-          <caret line="18" column="4688" lean-forward="false" selection-start-line="18" selection-start-column="4688" selection-end-line="18" selection-end-column="4688" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/global-polyfill.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/require.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="93" column="36" lean-forward="true" selection-start-line="93" selection-start-column="36" selection-end-line="93" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/crequire.js" />
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_a-function.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-from-iterable.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_an-instance.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-species-create.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_array-copy-within.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/core-polyfill.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/_export.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/js/corejs/modules/es6.object.create.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/conji/thiq/Thiq.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="116" column="78" lean-forward="false" selection-start-line="116" selection-start-column="78" selection-end-line="116" selection-end-column="78" />
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4863#4864#0" expanded="true" />
-            <element signature="e#4907#4908#0" expanded="true" />
+            <marker date="1514436036708" expanded="false" signature="1211:1222" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="1264:1270" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="1497:1508" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="1539:1545" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="1610:1621" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="1648:1654" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="1729:1740" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="1775:1781" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="1858:1869" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="1903:1909" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="1986:1997" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="2028:2034" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="2115:2126" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="2159:2165" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="2238:2249" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="2278:2284" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="2366:2377" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="2413:2419" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="2504:2515" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="2552:2558" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="2641:2652" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="2686:2692" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="2763:2774" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="2802:2808" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="2893:2904" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="2939:2945" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="3032:3043" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="3079:3085" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="3154:3165" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="3192:3198" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="3271:3282" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="3311:3317" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="3392:3403" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="3433:3439" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="3520:3531" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="3564:3570" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="3645:3656" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="3688:3694" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="3777:3788" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="3822:3828" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="3901:3912" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="3943:3949" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="4024:4035" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="4065:4071" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="4138:4149" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="4175:4181" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="4252:4263" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="4291:4297" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="4392:4403" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="4443:4449" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="4524:4535" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="4565:4571" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="4642:4653" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="4684:4690" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="4771:4782" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="4818:4824" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="4903:4914" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="4951:4957" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="5040:5051" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="5088:5094" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="5169:5180" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="5213:5219" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="5286:5297" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="5328:5334" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="5401:5412" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="5443:5449" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="5516:5527" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="5558:5564" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="5629:5640" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="5668:5674" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="5765:5776" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="5819:5825" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="5896:5907" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="5940:5946" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="6023:6034" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="6073:6079" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="6152:6163" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="6197:6203" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="6282:6293" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="6328:6334" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="6419:6430" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="6468:6474" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="6547:6558" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="6588:6594" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="6673:6684" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="6717:6723" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="6796:6807" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="6839:6845" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="6918:6929" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="6963:6969" ph=" }" />
+            <marker date="1514436036708" expanded="false" signature="7058:7069" ph=" { " />
+            <marker date="1514436036708" expanded="false" signature="7111:7117" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/WorldListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1514436249250" expanded="false" signature="1189:1200" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="1231:1237" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="1316:1327" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="1362:1368" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="1443:1454" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="1487:1493" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="1570:1581" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="1615:1621" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="1696:1707" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="1740:1746" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="1825:1836" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="1871:1877" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="1948:1959" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="1985:1991" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="2062:2073" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="2099:2105" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="2176:2187" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="2213:2219" ph=" }" />
+            <marker date="1514436249250" expanded="false" signature="2294:2305" ph=" { " />
+            <marker date="1514436249250" expanded="false" signature="2333:2339" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/VehicleListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-686">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#2298#2299#0" expanded="true" />
+            <element signature="e#2341#2342#0" expanded="true" />
+            <marker date="1514436249284" expanded="false" signature="1214:1225" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="1261:1267" ph=" }" />
+            <marker date="1514436249284" expanded="false" signature="1347:1358" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="1389:1395" ph=" }" />
+            <marker date="1514436249284" expanded="false" signature="1467:1478" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="1506:1512" ph=" }" />
+            <marker date="1514436249284" expanded="false" signature="1584:1595" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="1623:1629" ph=" }" />
+            <marker date="1514436249284" expanded="false" signature="1703:1714" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="1743:1749" ph=" }" />
+            <marker date="1514436249284" expanded="false" signature="1819:1830" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="1857:1863" ph=" }" />
+            <marker date="1514436249284" expanded="false" signature="1953:1964" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="2001:2007" ph=" }" />
+            <marker date="1514436249284" expanded="false" signature="2075:2086" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="2112:2118" ph=" }" />
+            <marker date="1514436249284" expanded="false" signature="2186:2197" ph=" { " />
+            <marker date="1514436249284" expanded="false" signature="2223:2229" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/PlayerListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3669">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#6737#6738#0" expanded="true" />
+            <element signature="e#6780#6781#0" expanded="true" />
+            <marker date="1514436234971" expanded="false" signature="1244:1255" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="1286:1292" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="1373:1384" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="1419:1425" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="1494:1505" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="1532:1538" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="1615:1626" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="1657:1663" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="1888:1899" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="1929:1935" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="2010:2021" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="2051:2057" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="2138:2149" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="2182:2188" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="2267:2278" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="2310:2316" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="2401:2412" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="2449:2455" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="2534:2545" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="2579:2585" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="2657:2668" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="2694:2700" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="2785:2796" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="2833:2839" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="2925:2936" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="2965:2971" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="3046:3057" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="3087:3093" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="3164:3175" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="3205:3211" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="3282:3293" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="3323:3329" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="3406:3417" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="3448:3454" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="3521:3532" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="3558:3564" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="3645:3656" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="3686:3692" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="3773:3784" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="3816:3822" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="3893:3904" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="3934:3940" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4027:4038" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="4074:4080" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4153:4164" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="4195:4201" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4272:4283" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="4313:4319" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4386:4397" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="4423:4429" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4496:4507" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="4533:4539" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4620:4631" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="4664:4670" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4739:4750" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="4777:4783" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4850:4861" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="4887:4893" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="4970:4981" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="5014:5020" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="5099:5110" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="5142:5148" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="5219:5230" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="5258:5264" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="5344:5355" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="5385:5391" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="5458:5469" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="5495:5501" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="5586:5597" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="5634:5640" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="5731:5742" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="5782:5788" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="5861:5872" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="5901:5907" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="5988:5999" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="6026:6032" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="6123:6134" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="6174:6180" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="6252:6263" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="6298:6304" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="6379:6390" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="6420:6426" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="6499:6510" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="6538:6544" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="6615:6626" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="6653:6659" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="6856:6867" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="6896:6902" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="6991:7002" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="7041:7047" ph=" }" />
+            <marker date="1514436234971" expanded="false" signature="7122:7133" ph=" { " />
+            <marker date="1514436234971" expanded="false" signature="7163:7169" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/InventoryListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1142">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#2876#2877#0" expanded="true" />
+            <element signature="e#2925#2926#0" expanded="true" />
+            <marker date="1514436036636" expanded="false" signature="1195:1206" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="1232:1238" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="1319:1330" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="1368:1374" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="1445:1456" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="1483:1489" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="1564:1575" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="1601:1607" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="1684:1695" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="1731:1737" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="1814:1825" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="1852:1858" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="1930:1941" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="1968:1974" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="2046:2057" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="2084:2090" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="2164:2175" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="2205:2211" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="2277:2288" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="2314:2320" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="2394:2405" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="2435:2441" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="2515:2526" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="2556:2562" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="2640:2651" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="2683:2689" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="2759:2770" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="2796:2802" ph=" }" />
+            <marker date="1514436036636" expanded="false" signature="3007:3018" ph=" { " />
+            <marker date="1514436036636" expanded="false" signature="3052:3058" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/ServerListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-611">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="e#2240#2241#0" expanded="true" />
+            <element signature="e#2288#2289#0" expanded="true" />
+            <marker date="1514436041065" expanded="false" signature="1197:1208" ph=" { " />
+            <marker date="1514436041065" expanded="false" signature="1237:1243" ph=" }" />
+            <marker date="1514436041065" expanded="false" signature="1322:1333" ph=" { " />
+            <marker date="1514436041065" expanded="false" signature="1368:1374" ph=" }" />
+            <marker date="1514436041065" expanded="false" signature="1451:1462" ph=" { " />
+            <marker date="1514436041065" expanded="false" signature="1496:1502" ph=" }" />
+            <marker date="1514436041065" expanded="false" signature="1587:1598" ph=" { " />
+            <marker date="1514436041065" expanded="false" signature="1633:1639" ph=" }" />
+            <marker date="1514436041065" expanded="false" signature="1718:1729" ph=" { " />
+            <marker date="1514436041065" expanded="false" signature="1758:1764" ph=" }" />
+            <marker date="1514436041065" expanded="false" signature="1845:1856" ph=" { " />
+            <marker date="1514436041065" expanded="false" signature="1882:1888" ph=" }" />
+            <marker date="1514436041065" expanded="false" signature="1971:1982" ph=" { " />
+            <marker date="1514436041065" expanded="false" signature="2019:2025" ph=" }" />
+            <marker date="1514436041065" expanded="false" signature="2112:2123" ph=" { " />
+            <marker date="1514436041065" expanded="false" signature="2162:2168" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/listeners/WeatherListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-194">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <marker date="1514436046582" expanded="false" signature="1203:1214" ph=" { " />
+            <marker date="1514436046582" expanded="false" signature="1245:1251" ph=" }" />
+            <marker date="1514436046582" expanded="false" signature="1324:1335" ph=" { " />
+            <marker date="1514436046582" expanded="false" signature="1364:1370" ph=" }" />
+            <marker date="1514436046582" expanded="false" signature="1443:1454" ph=" { " />
+            <marker date="1514436046582" expanded="false" signature="1483:1489" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/JsCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/JsCommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/ScriptManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/core/tts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/thiq/net/conji/Thiq.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="89" column="26" lean-forward="false" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1127,7 +1055,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>SpoutPlugin</last-edited>
+          <last-edited>spigot</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
