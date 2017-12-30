@@ -1,15 +1,4 @@
-// event handler objects
-global.block = {};
-global.enchantment = {};
-global.entity = {};
-global.inventory = {};
-global.hanging = {};
-global.player = {};
-global.server = {};
-global.vehicle = {};
-global.weather = {};
-global.world = {};
-global.js = {};
+
 
 (function() {
     global.registerEvent = function(handler, eventname, callback) {
