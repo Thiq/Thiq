@@ -136,6 +136,18 @@ function reloadBlockData() {
 }
 
 function initializeCoreModules() {
+    // event handler objects
+    global.block = {};
+    global.enchantment = {};
+    global.entity = {};
+    global.inventory = {};
+    global.hanging = {};
+    global.player = {};
+    global.server = {};
+    global.vehicle = {};
+    global.weather = {};
+    global.world = {};
+    global.js = {};
     var stdlib = fs.readFileSync('./plugins/Thiq/modules/.bin/stdlib.json');
     var moduleJSON = JSON.parse(stdlib);
     for (var i = 0; i < moduleJSON.length; i++) {
