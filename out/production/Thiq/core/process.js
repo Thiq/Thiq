@@ -1,7 +1,7 @@
 // TODO: implement NodeJS `process` for module usage.
 global.process = {
   env: {
-    serverType: ServerType.unknown
+    serverType: ServerType.unknown,
     jvmVersion: false,
     is64bit: false
   },

@@ -132,7 +132,7 @@ registerCommand({
 });
 
 function reloadBlockData() {
-    global.__blockdata = JSON.parse(fs.readFileSync('./plugins/Thiq/core/data.json'));
+    loader.loadCoreData();
 }
 
 function initializeCoreModules() {

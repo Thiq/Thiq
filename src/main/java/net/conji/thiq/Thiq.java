@@ -143,6 +143,16 @@ public class Thiq extends JavaPlugin {
             }
         }
 
+        public void loadCoreFile(String name) throws ScriptException, IOException {
+            String contents = IOUtils.toString(getResource("core/" + name + ".js"));
+            engine.eval(contents);
+        }
+
+        public void loadCoreData() throws ScriptException, IOException {
+            String contents = IOUtils.toString(getResource("core/data.json"));
+            engine.eval("global.__blockdata = " + contents);
+        }
+
         public Class<?> findClass(String className) {
             try {
                 return Class.forName(className);

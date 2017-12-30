@@ -74,7 +74,11 @@ The file extension is not required for these, as it will attempt to load with bo
         // since Java types are allowed, we need to create a way for Java types to be required. 
         // You can prepend a full class location with '@' to tell require that it's a Java class.
         if (lib.startsWith('@')) {
-            return eval(lib.substring(1));
+            try {
+                return eval(lib.substring(1));
+            } catch (ex) {
+                return Java.type(lib.substring(1));
+            }
         }
 
         // You can use require on multiple file types with multiple goals.

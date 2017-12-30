@@ -1,16 +1,11 @@
 // All script initialization begins here. All globals are set in here.
 global = this;
 
-loader.load('./plugins/Thiq/core/logger.js');
+loader.loadCoreFile('logger');
 
 function loadCore(name) {
-    try {
-
-        log('Loading core library file ' + name, 'd');
-        loader.load('./plugins/Thiq/core/' + name + '.js');
-    } catch (ex) {
-
-    }
+    log('Loading core library file ' + name, 'd');
+    loader.loadCoreFile(name);
 }
 
 loadCore('types');
