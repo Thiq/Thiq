@@ -192,3 +192,7 @@ if (global.__exectests != undefined) {
 } else {
     initializeThiq();
 }
+
+global.__reloadJs = function() {
+    initializeThiq();
+}

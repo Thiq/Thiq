@@ -39,7 +39,7 @@ public class Thiq extends JavaPlugin {
     Listener world;
     
     public void onEnable() {
-        Reload(true);
+        initializeJsEngine();
 
         block = new BlockListener(this);
         enchantment = new EnchantmentListener(this);
@@ -53,46 +53,36 @@ public class Thiq extends JavaPlugin {
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Reload(args.length > 0 && args[0].equalsIgnoreCase("-p"));
+        reload();
         sender.sendMessage("JavaScript has been reloaded");
         return true;
     }
-    
-    void Reload(boolean pers) {
-        if (pers) persistence = new HashMap<String, Object>();
+
+    void initializeJsEngine() {
         try {
             ScriptEngineManager sem = new ScriptEngineManager();
             js = sem.getEngineByName("JavaScript");
             js.put("loader", new ScriptLoader(js));
             js.put("engine", js);
-            try {
-                // in order for core-js to properly load, we need to temp defined "require" to assign to global variables.
-                // for now, it'll work like the essential
-                String blobPolyfill = getScript("blob-polyfill.js");
-                String globalPolyfill = getScript("global-polyfill.js");
-                String babel = getScript("babel.js");
-                js.eval("function require(module) { return loader.crequire(module); }");
-                js.eval(blobPolyfill);
-                js.eval(globalPolyfill);
-                js.eval(babel);
-                js.eval("global.eval = function(input) { var transformed = Babel.transform(input, { presets: ['es2015'] }).code; return engine.eval(transformed); }");
-                getLogger().log(Level.INFO, "Using Babel to compile ES2015.");
-            } catch (IOException ex) {
-                getLogger().log(Level.SEVERE, ex.getMessage());
-                js.eval("function eval(input) { return engine.eval(input); }");
-                getLogger().log(Level.INFO, "Could not locate ES2015 compiler. Using Nashorn's default compiler.");
-            }
+            js.eval("function eval(input) { return engine.eval(input); }");
+            getLogger().log(Level.INFO, "Using Babel to compile ES2015.");
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
 
             String main = IOUtils.toString(getResource("plugin.js")).replace('\t', ' ');
             js.eval(main);
-        } catch (FileNotFoundException ex) {
-            getLogger().log(Level.SEVERE, null, ex);
         } catch (ScriptException ex) {
             getLogger().log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            getLogger().log(Level.SEVERE, "Could not locate entry JS.", ex);
+            getLogger().log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    void reload() {
+        try {
+            js.eval("__reloadJs()");
+        } catch (ScriptException ex) {
+            getLogger().log(Level.SEVERE, null, ex);
         }
     }
     
@@ -117,11 +107,6 @@ public class Thiq extends JavaPlugin {
             this.engine = engine;
         }
 
-        public void Run(Object r) {
-            Invocable inv = (Invocable) js;
-            Runnable runnable = inv.getInterface(r, Runnable.class);
-            new Thread(runnable).start();
-        }
         public Object Interface(Object o, Class i) {
             Invocable inv = (Invocable) js;
             return inv.getInterface(o, i);
@@ -151,41 +136,6 @@ public class Thiq extends JavaPlugin {
         public void loadCoreData() throws ScriptException, IOException {
             String contents = IOUtils.toString(getResource("core/data.json"));
             engine.eval("global.__blockdata = " + contents);
-        }
-
-        public Class<?> findClass(String className) {
-            try {
-                return Class.forName(className);
-            } catch (Exception e) {
-                return null;
-            }
-        }
-
-        public List<Class<?>> find(String scannedPackage) {
-            try {
-                Field f = ClassLoader.class.getDeclaredField("classes");
-                f.setAccessible(true);
-
-                ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-                ArrayList<Class<?>> foundClasses = new ArrayList<Class<?>>();
-                Vector<Class> classes =  (Vector<Class>) f.get(classLoader);
-                for (Class<?> c : classes) {
-                    if (c.getName().startsWith(scannedPackage)) {
-                        foundClasses.add(c);
-                    }
-                }
-                return foundClasses;
-            } catch (Exception e) {
-                return null;
-            }
-
-        }
-
-        public void crequire(String module) throws Exception {
-            // if I ever have to hack shit like this again, I'm jumping in front of a train.
-            SimpleBindings bindings = new SimpleBindings();
-            String contents = getScript(module + ".js");
-            engine.eval(contents, bindings);
         }
     }
 }
