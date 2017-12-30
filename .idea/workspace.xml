@@ -6,26 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91cd9c7d-ee33-4df2-93df-b2cc20ff7eef" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/PlugJS/src/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/spigot.xml" afterPath="$PROJECT_DIR$/.idea/libraries/spigot.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/Thiq/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/core/process.js" afterPath="$PROJECT_DIR$/out/production/Thiq/core/process.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/core/require.js" afterPath="$PROJECT_DIR$/out/production/Thiq/core/require.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/core/thiq.js" afterPath="$PROJECT_DIR$/out/production/Thiq/core/thiq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/plugin.js" afterPath="$PROJECT_DIR$/out/production/Thiq/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/src/resources/core/process.js" afterPath="$PROJECT_DIR$/out/production/Thiq/src/resources/core/process.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/src/resources/core/require.js" afterPath="$PROJECT_DIR$/out/production/Thiq/src/resources/core/require.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/src/resources/core/thiq.js" afterPath="$PROJECT_DIR$/out/production/Thiq/src/resources/core/thiq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Thiq/src/resources/plugin.js" afterPath="$PROJECT_DIR$/out/production/Thiq/src/resources/plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/net/conji/thiq/Thiq.java" afterPath="$PROJECT_DIR$/src/main/java/net/conji/thiq/Thiq.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/core/process.js" afterPath="$PROJECT_DIR$/src/resources/core/process.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/core/require.js" afterPath="$PROJECT_DIR$/src/resources/core/require.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/core/thiq.js" afterPath="$PROJECT_DIR$/src/resources/core/thiq.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/plugin.js" afterPath="$PROJECT_DIR$/src/resources/plugin.js" />
-    </list>
+    <list default="true" id="91cd9c7d-ee33-4df2-93df-b2cc20ff7eef" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -198,7 +179,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="1294" />
     <option name="height" value="1084" />
@@ -484,7 +465,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
