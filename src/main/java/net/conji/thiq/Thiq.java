@@ -75,7 +75,7 @@ public class Thiq extends JavaPlugin {
                 js.eval(blobPolyfill);
                 js.eval(globalPolyfill);
                 js.eval(babel);
-                js.eval("function eval(input) { return engine.eval(Babel.transform(input, { presets: [ 'es2015' ] }).code); }");
+                js.eval("global.eval = function(input) { var transformed = Babel.transform(input, { presets: ['es2015'] }).code; return engine.eval(transformed); }");
                 getLogger().log(Level.INFO, "Using Babel to compile ES2015.");
             } catch (IOException ex) {
                 getLogger().log(Level.SEVERE, ex.getMessage());
@@ -186,7 +186,6 @@ public class Thiq extends JavaPlugin {
             SimpleBindings bindings = new SimpleBindings();
             String contents = getScript(module + ".js");
             engine.eval(contents, bindings);
-            getLogger().log(Level.INFO, bindings.get("module").toString());
         }
     }
 }
