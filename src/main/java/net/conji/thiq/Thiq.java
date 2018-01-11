@@ -39,7 +39,7 @@ public class Thiq extends JavaPlugin {
     Listener world;
     
     public void onEnable() {
-        Reload(true);
+        reload(true);
 
         block = new BlockListener(this);
         enchantment = new EnchantmentListener(this);
@@ -53,34 +53,21 @@ public class Thiq extends JavaPlugin {
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        Reload(args.length > 0 && args[0].equalsIgnoreCase("-p"));
+        reload(false);
         sender.sendMessage("JavaScript has been reloaded");
         return true;
     }
-    
-    void Reload(boolean pers) {
-        if (pers) persistence = new HashMap<String, Object>();
+
+    void initializeJsEngine() {
         try {
             ScriptEngineManager sem = new ScriptEngineManager();
             js = sem.getEngineByName("JavaScript");
             js.put("loader", new ScriptLoader(js));
             js.put("engine", js);
             try {
-                // in order for core-js to properly load, we need to temp defined "require" to assign to global variables.
-                // for now, it'll work like the essential
-                String blobPolyfill = getScript("blob-polyfill.js");
-                String globalPolyfill = getScript("global-polyfill.js");
-                String babel = getScript("babel.js");
-                js.eval("function require(module) { return loader.crequire(module); }");
-                js.eval(blobPolyfill);
-                js.eval(globalPolyfill);
-                js.eval(babel);
-                js.eval("global.eval = function(input) { var transformed = Babel.transform(input, { presets: ['es2015'] }).code; return engine.eval(transformed); }");
-                getLogger().log(Level.INFO, "Using Babel to compile ES2015.");
-            } catch (IOException ex) {
-                getLogger().log(Level.SEVERE, ex.getMessage());
                 js.eval("function eval(input) { return engine.eval(input); }");
-                getLogger().log(Level.INFO, "Could not locate ES2015 compiler. Using Nashorn's default compiler.");
+            } catch (ScriptException ex) {
+                getLogger().log(Level.SEVERE, ex.getMessage());;
             }
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
@@ -93,6 +80,18 @@ public class Thiq extends JavaPlugin {
             getLogger().log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             getLogger().log(Level.SEVERE, "Could not locate entry JS.", ex);
+        }
+    }
+    
+    void reload(boolean fullReload) {
+        if (fullReload) {
+            initializeJsEngine();
+        } else {
+            try {
+                js.eval("__reloadJs()");
+            } catch (ScriptException ex) {
+                getLogger().log(Level.SEVERE, null, ex);
+            }
         }
     }
     
