@@ -1,4 +1,6 @@
 # Thiq ![](https://travis-ci.org/Thiq/Thiq.svg?branch=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FThiq%2FThiq.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FThiq%2FThiq?ref=badge_shield)
+
 > A complete JavaScript loader and framework for the Spigot Server API.
 
 
@@ -63,3 +65,7 @@ Justin Cox – hello@thiq.org
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/Thiq/Thiq/wiki
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FThiq%2FThiq.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FThiq%2FThiq?ref=badge_large)
