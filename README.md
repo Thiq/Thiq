@@ -1,6 +1,6 @@
 # Thiq ![](https://travis-ci.org/Thiq/Thiq.svg?branch=master)
-> A complete JavaScript loader and framework for the Spigot Server API.
-
+> A complete JavaScript loader and framework for the Spigot Server API.  
+[![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
 
 ![](thiq.png)
 
@@ -8,30 +8,6 @@
 
 - Place Thiq.jar in the plugins folder
 - Create a folder named `Thiq`
-- Clone [the startup files repo](https://github.com/Thiq/thiq-scripts)
-- Clone [the core repo](https://github.com/Thiq/core) into the `core` folder**
-- Clone [the modules repo](https://github.com/Thiq/modules) into the `modules` folder**
-- Clone [the libs repo](https://github.com/Thiq/libs) into the `libs` folder**
-
-** _These steps will soon be automated_
-
-## Usage example
-
-To create a new script that runs when a player joins the game:
-*Thiq/libs/myPlayerJoin.js*
-```
-registerEvent(player, 'join', function(event) {
-  player.sendMessage('Hello! Welcome to my server!');
-}
-```
-*Thiq/thiq.json*
-```
-{
-  "libraries": [
-    "myPlayerJoin.js"
-  ]
-}
-```
 
 ## Development setup
 
@@ -56,10 +32,4 @@ Justin Cox – hello@thiq.org
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/Thiq/Thiq/wiki
+
