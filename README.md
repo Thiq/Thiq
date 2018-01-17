@@ -1,5 +1,6 @@
 # Thiq ![](https://travis-ci.org/Thiq/Thiq.svg?branch=master)
 > A complete JavaScript loader and framework for the Spigot Server API.  
+
 [![forthebadge](http://forthebadge.com/images/badges/fuck-it-ship-it.svg)](http://forthebadge.com)
 
 ![](thiq.png)
