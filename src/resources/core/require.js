@@ -51,8 +51,8 @@ The file extension is not required for these, as it will attempt to load with bo
 */
 
 (function(__global__) {
-    var jFile = importClass('java.io.File');
-    var jPath = importClass('java.nio.file.Paths');
+    var jFile = Java.type('java.io.File');
+    var jPath = Java.type('java.nio.file.Paths');
     var cachedModules = {};
 
     function __module(name) {
@@ -69,7 +69,7 @@ The file extension is not required for these, as it will attempt to load with bo
      * @param {*} module The parent module being passed in. If being called from inside of a module,
      * then it references the parent module.
      */
-    function __require(lib, options, root, module) {
+    function __require(lib, options, module) {
         // since Java types are allowed, we need to create a way for Java types to be required. 
         // You can prepend a full class location with '@' to tell require that it's a Java class.
         if (lib.startsWith('@')) {
@@ -109,7 +109,6 @@ The file extension is not required for these, as it will attempt to load with bo
         if (!module) {
             module = {
                 exports: {},
-                root: root,
                 name: lib,
                 isLoaded: false
             };
@@ -117,12 +116,11 @@ The file extension is not required for these, as it will attempt to load with bo
 
         var _loader;
         if (isModule) {
-            // reset root to global root
-            root = __root__;
+            // set the dir
+            $DIR = './plugins/Thiq/modules/' + lib;
             // reset the module object locally
             module = cachedModules[lib] || {
                 exports: {},
-                root: root,
                 name: lib,
                 isLoaded: false
             };
@@ -132,13 +130,13 @@ The file extension is not required for these, as it will attempt to load with bo
             // if we're loading a module, we need to determine the entry point for the module.
             // first we look for the package.json file to determine the main field.
             // Also load the settings while we're at it
-            if (fileExists(root + '/modules/' + lib + '/package.json')) {
-                var packageData = readFully(root + '/modules/' + lib + '/package.json');
+            if (fileExists($DIR + '/package.json')) {
+                var packageData = readFully($DIR + '/package.json');
                 var packageJSON = JSON.parse(packageData);
                 module.__packageinfo = packageJSON;
 
                 if (packageJSON.main != undefined) {
-                    module.__filename = packageJSON.main;
+                    $FILE = $DIR + '/' + packageJSON.main;
                 }
                 module.loader = packageJSON.loader;
                 module.isLiveReload = packageJSON.liveReload;
@@ -147,38 +145,35 @@ The file extension is not required for these, as it will attempt to load with bo
             _loader = registeredLoaders[parentOptions.loader];
             // this covers is both the package.json is not found and if the main field doesn't exist
             // in the package.json
-            if (module.__filename == undefined) {
-                if (fileExists(root + '/modules/' + lib + '/index.json')) {
-                    module.__filename = 'index.json';
+            if (fileToLoad == undefined) {
+                if (fileExists($DIR + '/index.json')) {
+                    $FILE = $DIR + '/index.json';
                 } else {
-                    if (fileExists(root + '/modules/' + lib + '/index' + _loader.ext)) {
-                        module.__filename = 'index' + _loader.ext;
-                    } else if (fileExists(root + '/modules/' + lib + '/index.js')) {
+                    if (fileExists($DIR + '/index' + _loader.ext)) {
+                        $FILE = $DIR + '/index' + _loader.ext;
+                    } else if (fileExists($DIR + '/index.js')) {
                         _loader = registeredLoaders.js;
-                        module.__filename = 'index.js';
+                        $FILE = $DIR + '/index.js';
                     } else {
-                        throw 'An error occured when loading module ' + lib + ': Could not locate entry point (' + root + '/modules/' + lib + ')';
+                        throw 'An error occured when loading module ' + lib + ': Could not locate entry point (' + $DIR + ')';
                     }
                 }
             }
-
-            module.root += '/modules/' + lib + '/';
         } else {
             _loader = registeredLoaders[parentOptions.loader];
             if (!lib.endsWith(_loader.ext)) {
                 lib += _loader.ext;
             }
-            if (fileExists(root + '/' + lib)) {
-                module.__filename = '/' + lib;
+            if (fileExists($DIR + '/' + lib)) {
+                $FILE = $DIR + '/' + lib;
             } else {
-                // TODO: hook into loaders
-                throw 'An error occured when loading module ' + lib + ': Could not locate file ' + root + lib;
+                throw 'An error occured when loading module ' + lib + ': Could not locate file ' + $DIR + '/' + lib;
             }
         }
         if (_loader == undefined) throw 'Invalid loader for ' + lib + ': ' + parentOptions.loader;
         // if we've gotten this far, we've located the file location. Now we need to process it.
-        var fileContents = _readFile(normalizePath(module.root + '/' + module.__filename));
-        if (/\.json$/.test(module.__filename)) {
+        var fileContents = _readFile(normalizePath($FILE));
+        if (/\.json$/.test($FILE)) {
             var moduleJSON = JSON.parse(fileContents);
             module.exports = moduleJSON;
         } else {
@@ -190,15 +185,17 @@ The file extension is not required for these, as it will attempt to load with bo
                     // the local require is the same as the global require, except where the 
                     // root of the function is at. Globally, it's set to the entire app directory.
                     // Locally, it needs to be set to the module's base directory.
-                    return __require(lib, parentOptions || {}, module.root, module);
+                    return __require(lib, parentOptions || {}, module);
                 },
-                __filename: module.__filename
+                __filename: $FILE
             };
             module.isLoaded = true;
             callFn(compiledContents, paramsObject);
         }
         // set the module into the cache for later usage.
         cachedModules[lib] = module;
+        $FILE = false;
+        $DIR = false;
         return module.exports.default || module.exports;
     }
 
@@ -211,7 +208,7 @@ The file extension is not required for these, as it will attempt to load with bo
     }
 
     __global__.require = function(lib, options) {
-        return __require(lib, options || {}, __root__);
+        return __require(lib, options || {});
     }
     __global__.rmodule = function(lib) {
         return __module(lib);
@@ -220,4 +217,4 @@ The file extension is not required for these, as it will attempt to load with bo
     __global__.unregisterModules = function() {
         cachedModules = {};
     }
-}).call(null, global, './plugins/Thiq/');
+}).call(null, global);

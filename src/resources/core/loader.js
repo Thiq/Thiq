@@ -90,19 +90,22 @@ function _readFile(location) {
     }
 
     global.callFn = function(js, argsObject) {
+        $DIR = './plugins/Thiq/';
+        $FILE = false;
         var wrapper = createWrapperFunction(js, argsObject);
         var fn = eval(wrapper);
         return fn.apply(null, argValues);
     }
     
     // set to global so all scripts can use it. Tho idk if that's a good idea :think:
-    global.loadFromFile = function(file, wrapperArgs) {
+    global.loadFromFile = function(file) {
         try {
             var input = _readFile(file);
-            if (wrapperArgs != undefined) {
-                input = createWrapperFunction(input, wrapperArgs);
-            }
-    
+            $DIR = file.substring(0, file.lastIndexOf('/'));
+            $FILE = file;
+            eval(input);
+            $DIR = false;
+            $FILE = false;
         } catch (exception) {
             log('Failed to load file ' + file + ': ' + exception, 'c');
         }

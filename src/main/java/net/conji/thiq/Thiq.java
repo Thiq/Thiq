@@ -12,6 +12,7 @@ import java.util.*;
 import java.util.logging.Level;
 import javax.script.*;
 
+import com.sun.net.httpserver.HttpContext;
 import net.conji.thiq.listeners.*;
 import org.apache.commons.io.IOUtils;
 import org.bukkit.Server;
@@ -26,6 +27,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class Thiq extends JavaPlugin {
     public ScriptEngine js;
+    public ScriptLoader loader;
     HashMap<String, Object> persistence;
     Listener block;
     Listener enchantment;
@@ -62,7 +64,8 @@ public class Thiq extends JavaPlugin {
         try {
             ScriptEngineManager sem = new ScriptEngineManager();
             js = sem.getEngineByName("JavaScript");
-            js.put("loader", new ScriptLoader(js));
+            loader = new ScriptLoader(js);
+            js.put("loader", loader);
             js.put("engine", js);
             try {
                 js.eval("function eval(input) { return engine.eval(input); }");
@@ -71,14 +74,10 @@ public class Thiq extends JavaPlugin {
             }
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
-
+            js.put("$DIR", "./plugins/Thiq/");
+            js.put("$FILE", false);
             String main;
-            if (new File("./plugins/Thiq/plugin.js").exists()) {
-                main = getScript("plugin.js");
-            } else {
-                main = IOUtils.toString(getResource("plugin.js")).replace('\t', ' ');
-            }
-            js.eval(main);
+            loader.load("plugin.js");
         } catch (ScriptException ex) {
             getLogger().log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -102,16 +101,6 @@ public class Thiq extends JavaPlugin {
         return new JsCommandExecutor(name, description, usage, aliases, command);
     }
 
-    private String getScript(String name) throws IOException {
-        Path scriptLocation = Paths.get("./plugins/Thiq/" + name);
-        List<String> contents = Files.readAllLines(scriptLocation);
-        String result = "";
-        for (String line: contents) {
-            result += line + "\r\n";
-        }
-        return result;
-    }
-
     public class ScriptLoader {
         ScriptEngine engine;
 
@@ -125,35 +114,39 @@ public class Thiq extends JavaPlugin {
         }
         public Server getServer() {return Thiq.this.getServer();}
         public Object load(String file) throws FileNotFoundException, ScriptException {
+            file = file.replace('\\', '/');
             try {
-                InputStreamReader stream = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
+                String pFile = "./plugins/Thiq/" + file;
+                InputStreamReader stream = new InputStreamReader(new FileInputStream(pFile), StandardCharsets.UTF_8);
                 BufferedReader buffer = new BufferedReader(stream);
                 String line = null;
                 String result = "";
                 while ((line = buffer.readLine()) != null) {
                     result += line + "\r\n";
                 }
-                engine.eval("$DIR = " + file.substring(0, file.lastIndexOf("/")));
-                engine.eval("$FILE = " + file);
-                return js.eval(result);
+
+                engine.put("$DIR", Paths.get(pFile).getParent());
+                engine.put("$FILE", pFile);
+                Object output = js.eval(result);
+                engine.put("$DIR", false);
+                engine.put("$FILE", false);
+                return output;
+            } catch (FileNotFoundException ex) {
+                try {
+                    String result = IOUtils.toString(getResource(file));
+                    return js.eval(result);
+                } catch (IOException io) {
+                    getLogger().log(Level.SEVERE, ex.toString());
+                    return null;
+                }
             } catch (Exception ex) {
                 getLogger().log(Level.SEVERE, ex.toString());
                 return null;
             }
         }
 
-        public void loadCoreFile(String name) throws ScriptException, IOException {
-            String contents = "";
-            File coreFile = new File("./plugins/Thiq/core/" + name + ".js");
-            // this allows us to use local core files instead of embedded ones for debugging purposes.
-            if (coreFile.exists() && coreFile.isFile()) {
-                contents = getScript("core/" + name + ".js");
-                engine.eval("$DIR = " + "./plugins/Thiq/core/");
-                engine.eval("$FILE = " + "./plugins/Thiq/core/" + name + ".js");
-            } else {
-                contents = IOUtils.toString(getResource("core/" + name + ".js"));
-            }
-            engine.eval(contents);
+        public Object loadCoreFile(String name) throws ScriptException, IOException {
+            return load("/core/" + name + ".js");
         }
 
         public void loadCoreData() throws ScriptException, IOException {

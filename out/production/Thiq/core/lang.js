@@ -150,16 +150,6 @@ String.isNullOrEmpty = function(input) {
     return input == undefined || input == null || input == '';
 }
 
-Object.defineProperty(Object.prototype, 'prop', {
-    get: function() {
-        return function(name, descriptor) {
-            var constructor = this;
-            Object.defineProperty(constructor.prototype, name, descriptor);
-        }
-    },
-    enumerable: false
-});
-
 function constructObject(constructor, args) {
     function F() {
         return constructor.apply(this, args);
