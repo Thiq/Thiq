@@ -8,7 +8,6 @@ var File = Java.type('java.io.File');
 
 var registeredLoaders = registeredLoaders || {};
 var Bukkit = org.bukkit.Bukkit;
-global.$FILE = false; // this will be set every time we load a file, that way require can be used properly.
 
 function _readFile(location) {
     var fIn = new BufferedReader(new InputStreamReader(new FileInputStream(location), "UTF8"));
@@ -69,7 +68,6 @@ function _readFile(location) {
         console.log('WARNING: when using loaders, a heap overflow may occur with the command /reload depending on the size of the loader file.', 'c');
     }
 
-    
     function findLoaderForFile(filename) {
         for (var l in registeredLoaders) {
             var loader = registeredLoaders[l];
@@ -78,7 +76,6 @@ function _readFile(location) {
         return registeredLoaders.js;
     }
 
-    
     global.createWrapperFunction = function(body, argsObject) {
         var argNames = [], argValues = [];
         for (var arg in argsObject) {

@@ -72,7 +72,12 @@ public class Thiq extends JavaPlugin {
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
 
-            String main = IOUtils.toString(getResource("plugin.js")).replace('\t', ' ');
+            String main;
+            if (new File("./plugins/Thiq/plugin.js").exists()) {
+                main = getScript("plugin.js");
+            } else {
+                main = IOUtils.toString(getResource("plugin.js")).replace('\t', ' ');
+            }
             js.eval(main);
         } catch (ScriptException ex) {
             getLogger().log(Level.SEVERE, null, ex);
@@ -128,6 +133,8 @@ public class Thiq extends JavaPlugin {
                 while ((line = buffer.readLine()) != null) {
                     result += line + "\r\n";
                 }
+                engine.eval("$DIR = " + file.substring(0, file.lastIndexOf("/")));
+                engine.eval("$FILE = " + file);
                 return js.eval(result);
             } catch (Exception ex) {
                 getLogger().log(Level.SEVERE, ex.toString());
@@ -136,7 +143,16 @@ public class Thiq extends JavaPlugin {
         }
 
         public void loadCoreFile(String name) throws ScriptException, IOException {
-            String contents = IOUtils.toString(getResource("core/" + name + ".js"));
+            String contents = "";
+            File coreFile = new File("./plugins/Thiq/core/" + name + ".js");
+            // this allows us to use local core files instead of embedded ones for debugging purposes.
+            if (coreFile.exists() && coreFile.isFile()) {
+                contents = getScript("core/" + name + ".js");
+                engine.eval("$DIR = " + "./plugins/Thiq/core/");
+                engine.eval("$FILE = " + "./plugins/Thiq/core/" + name + ".js");
+            } else {
+                contents = IOUtils.toString(getResource("core/" + name + ".js"));
+            }
             engine.eval(contents);
         }
 
