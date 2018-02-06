@@ -39,7 +39,7 @@ public class Thiq extends JavaPlugin {
     Listener world;
     
     public void onEnable() {
-        initializeJsEngine();
+        reload(true);
 
         block = new BlockListener(this);
         enchantment = new EnchantmentListener(this);
@@ -53,7 +53,7 @@ public class Thiq extends JavaPlugin {
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        reload();
+        reload(false);
         sender.sendMessage("JavaScript has been reloaded");
         return true;
     }
@@ -64,8 +64,11 @@ public class Thiq extends JavaPlugin {
             js = sem.getEngineByName("JavaScript");
             js.put("loader", new ScriptLoader(js));
             js.put("engine", js);
-            js.eval("function eval(input) { return engine.eval(input); }");
-            getLogger().log(Level.INFO, "Using Babel to compile ES2015.");
+            try {
+                js.eval("function eval(input) { return engine.eval(input); }");
+            } catch (ScriptException ex) {
+                getLogger().log(Level.SEVERE, ex.getMessage());;
+            }
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
 
@@ -78,11 +81,15 @@ public class Thiq extends JavaPlugin {
         }
     }
     
-    void reload() {
-        try {
-            js.eval("__reloadJs()");
-        } catch (ScriptException ex) {
-            getLogger().log(Level.SEVERE, null, ex);
+    void reload(boolean fullReload) {
+        if (fullReload) {
+            initializeJsEngine();
+        } else {
+            try {
+                js.eval("__reloadJs()");
+            } catch (ScriptException ex) {
+                getLogger().log(Level.SEVERE, null, ex);
+            }
         }
     }
     

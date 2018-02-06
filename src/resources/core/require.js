@@ -162,7 +162,7 @@ The file extension is not required for these, as it will attempt to load with bo
                 }
             }
 
-            module.root += '/modules/' + lib;
+            module.root += '/modules/' + lib + '/';
         } else {
             _loader = registeredLoaders[parentOptions.loader];
             if (!lib.endsWith(_loader.ext)) {
@@ -216,4 +216,8 @@ The file extension is not required for these, as it will attempt to load with bo
     __global__.rmodule = function(lib) {
         return __module(lib);
     }
-}).call(null, global, './plugins/Thiq');
+
+    __global__.unregisterModules = function() {
+        cachedModules = {};
+    }
+}).call(null, global, './plugins/Thiq/');
