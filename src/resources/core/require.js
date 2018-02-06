@@ -50,11 +50,10 @@ Example:
 The file extension is not required for these, as it will attempt to load with both JS and JSON.
 */
 
-(function(__global__, __root__) {
+(function(__global__) {
     var jFile = importClass('java.io.File');
     var jPath = importClass('java.nio.file.Paths');
     var cachedModules = {};
-    var $root = __root__;
 
     function __module(name) {
         if (!cachedModules[name]) {
@@ -134,7 +133,7 @@ The file extension is not required for these, as it will attempt to load with bo
             // first we look for the package.json file to determine the main field.
             // Also load the settings while we're at it
             if (fileExists(root + '/modules/' + lib + '/package.json')) {
-                var packageData = _readFile(root + '/modules/' + lib + '/package.json');
+                var packageData = readFully(root + '/modules/' + lib + '/package.json');
                 var packageJSON = JSON.parse(packageData);
                 module.__packageinfo = packageJSON;
 
