@@ -27,7 +27,6 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class Thiq extends JavaPlugin {
     public ScriptEngine js;
-    public ScriptLoader loader;
     HashMap<String, Object> persistence;
     Listener block;
     Listener enchantment;
@@ -64,23 +63,19 @@ public class Thiq extends JavaPlugin {
         try {
             ScriptEngineManager sem = new ScriptEngineManager();
             js = sem.getEngineByName("JavaScript");
-            loader = new ScriptLoader(js);
-            js.put("loader", loader);
+            js.put("loader", new ScriptLoader(js));
             js.put("engine", js);
             try {
                 js.eval("function eval(input) { return engine.eval(input); }");
             } catch (ScriptException ex) {
-                getLogger().log(Level.SEVERE, ex.getMessage());;
+                getLogger().log(Level.SEVERE, ex.getMessage() + " \r\n[BEGIN STACKTRACE]\r\n" + ex.getStackTrace() + "\r\n[END STACKTRACE]");
             }
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
             js.put("$DIR", "./plugins/Thiq/");
             js.put("$FILE", false);
-            String main;
-            loader.load("plugin.js");
+            js.eval("load('plugin.js')");
         } catch (ScriptException ex) {
-            getLogger().log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
             getLogger().log(Level.SEVERE, null, ex);
         }
     }
@@ -124,23 +119,18 @@ public class Thiq extends JavaPlugin {
                 while ((line = buffer.readLine()) != null) {
                     result += line + "\r\n";
                 }
-
-                engine.put("$DIR", Paths.get(pFile).getParent());
-                engine.put("$FILE", pFile);
                 Object output = js.eval(result);
-                engine.put("$DIR", false);
-                engine.put("$FILE", false);
                 return output;
             } catch (FileNotFoundException ex) {
                 try {
                     String result = IOUtils.toString(getResource(file));
                     return js.eval(result);
                 } catch (IOException io) {
-                    getLogger().log(Level.SEVERE, ex.toString());
+                    getLogger().log(Level.SEVERE, io.getMessage() + " \r\n[BEGIN STACKTRACE]\r\n" + io.getStackTrace() + "\r\n[END STACKTRACE]");
                     return null;
                 }
             } catch (Exception ex) {
-                getLogger().log(Level.SEVERE, ex.toString());
+                getLogger().log(Level.SEVERE, ex.getMessage() + " \r\n[BEGIN STACKTRACE]\r\n" + ex.getStackTrace() + "\r\n[END STACKTRACE]");
                 return null;
             }
         }
