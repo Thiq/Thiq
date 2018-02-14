@@ -12,6 +12,7 @@ import java.util.*;
 import java.util.logging.Level;
 import javax.script.*;
 
+import com.sun.net.httpserver.HttpContext;
 import net.conji.thiq.listeners.*;
 import org.apache.commons.io.IOUtils;
 import org.bukkit.Server;
@@ -67,19 +68,15 @@ public class Thiq extends JavaPlugin {
             try {
                 js.eval("function eval(input) { return engine.eval(input); }");
             } catch (ScriptException ex) {
-                getLogger().log(Level.SEVERE, ex.getMessage());;
+                getLogger().log(Level.SEVERE, ex.getMessage() + getStackTrace(ex));
             }
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
-
-            String main = IOUtils.toString(getResource("plugin.js")).replace('\t', ' ');
-            js.eval(main);
-        } catch (FileNotFoundException ex) {
-            getLogger().log(Level.SEVERE, null, ex);
+            js.put("$DIR", "./plugins/Thiq/");
+            js.put("$FILE", false);
+            js.eval("load('plugin.js')");
         } catch (ScriptException ex) {
             getLogger().log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            getLogger().log(Level.SEVERE, "Could not locate entry JS.", ex);
         }
     }
     
@@ -94,19 +91,20 @@ public class Thiq extends JavaPlugin {
             }
         }
     }
+
+
+     String getStackTrace(Exception ex) {
+        String result = "\r\n[BEGIN STACKTRACE]\r\nReading file '" + js.get("$FILE") + "'\r\n";
+        StackTraceElement[] trace = ex.getStackTrace();
+        for (StackTraceElement line: trace) {
+            result += line.getClassName() + "." + line.getMethodName() + " (line:" + line.getLineNumber() + ")\r\n";
+        }
+        result += "[END STACKTRACE]\r\n";
+        return result;
+    }
     
     public JsCommandExecutor createCommand(String name, String description, String usage, List<String> aliases, JsCommand command) {
         return new JsCommandExecutor(name, description, usage, aliases, command);
-    }
-
-    private String getScript(String name) throws IOException {
-        Path scriptLocation = Paths.get("./plugins/Thiq/" + name);
-        List<String> contents = Files.readAllLines(scriptLocation);
-        String result = "";
-        for (String line: contents) {
-            result += line + "\r\n";
-        }
-        return result;
     }
 
     public class ScriptLoader {
@@ -116,35 +114,44 @@ public class Thiq extends JavaPlugin {
             this.engine = engine;
         }
 
-        public void Run(Object r) {
-            Invocable inv = (Invocable) js;
-            Runnable runnable = inv.getInterface(r, Runnable.class);
-            new Thread(runnable).start();
-        }
         public Object Interface(Object o, Class i) {
             Invocable inv = (Invocable) js;
             return inv.getInterface(o, i);
         }
         public Server getServer() {return Thiq.this.getServer();}
         public Object load(String file) throws FileNotFoundException, ScriptException {
+            file = file.replace('\\', '/');
             try {
-                InputStreamReader stream = new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8);
+                String pFile = "./plugins/Thiq/" + file;
+                InputStreamReader stream = new InputStreamReader(new FileInputStream(pFile), StandardCharsets.UTF_8);
                 BufferedReader buffer = new BufferedReader(stream);
                 String line = null;
                 String result = "";
                 while ((line = buffer.readLine()) != null) {
                     result += line + "\r\n";
                 }
-                return js.eval(result);
+                Object output = js.eval(result);
+                return output;
+            } catch (FileNotFoundException ex) {
+                try {
+                    file = removePrefixSlashes(file);
+                    InputStream resx = getResource(file);
+                    if (resx == null) throw new IOException("Resource doesn't exist: " + file);
+                    String result = IOUtils.toString(resx);
+                    return js.eval(result);
+                } catch (IOException io) {
+
+                    getLogger().log(Level.SEVERE, io.getMessage() + getStackTrace(io));
+                    return null;
+                }
             } catch (Exception ex) {
-                getLogger().log(Level.SEVERE, ex.toString());
+                getLogger().log(Level.SEVERE, ex.getMessage() + getStackTrace(ex));
                 return null;
             }
         }
 
-        public void loadCoreFile(String name) throws ScriptException, IOException {
-            String contents = IOUtils.toString(getResource("core/" + name + ".js"));
-            engine.eval(contents);
+        public Object loadCoreFile(String name) throws ScriptException, IOException {
+            return load("/core/" + name + ".js");
         }
 
         public void loadCoreData() throws ScriptException, IOException {
@@ -152,39 +159,13 @@ public class Thiq extends JavaPlugin {
             engine.eval("global.__blockdata = " + contents);
         }
 
-        public Class<?> findClass(String className) {
-            try {
-                return Class.forName(className);
-            } catch (Exception e) {
-                return null;
+        String removePrefixSlashes(String input) {
+            int startIndex = 0;
+            for (int i = 0; i < input.length(); i++) {
+                if (input.charAt(i) == '/') startIndex++;
+                else return input.substring(startIndex);
             }
-        }
-
-        public List<Class<?>> find(String scannedPackage) {
-            try {
-                Field f = ClassLoader.class.getDeclaredField("classes");
-                f.setAccessible(true);
-
-                ClassLoader classLoader = ClassLoader.getSystemClassLoader();
-                ArrayList<Class<?>> foundClasses = new ArrayList<Class<?>>();
-                Vector<Class> classes =  (Vector<Class>) f.get(classLoader);
-                for (Class<?> c : classes) {
-                    if (c.getName().startsWith(scannedPackage)) {
-                        foundClasses.add(c);
-                    }
-                }
-                return foundClasses;
-            } catch (Exception e) {
-                return null;
-            }
-
-        }
-
-        public void crequire(String module) throws Exception {
-            // if I ever have to hack shit like this again, I'm jumping in front of a train.
-            SimpleBindings bindings = new SimpleBindings();
-            String contents = getScript(module + ".js");
-            engine.eval(contents, bindings);
+            return "";
         }
     }
 }
