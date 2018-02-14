@@ -11,6 +11,10 @@ function getPlugin(name) {
 
 var plugin = getPlugin();
 var fs = require('fs');
+var path = require('path');
+var File = require('@java.io.File');
+libraryConfig = new Config('./plugins/Thiq/thiq.json');
+libraryConfig.load();
 
 function read_proc() {
     var pb = new java.lang.ProcessBuilder["(java.lang.String[])"](_a(arguments));
@@ -89,19 +93,14 @@ function loadLibraryScript(name, loader) {
     log('Loading library script ' + name, 'd');
     try {
         if (fs.exists('./plugins/Thiq/libs/' + name)) {
-            var paramsObject = {
-                exports: {},
-                __filename: name,
-                __dirname: './plugins/Thiq/libs/'
-            };
-            var contents = loader.exports.compileFn(_readFile(paramsObject.__dirname + paramsObject.__filename));
-            for (var e in paramsObject.exports) {
-                var globalExport = paramsObject.exports[e];
-                if (paramsObject.exports.hasOwnProperty(e)) {
-                    eval(e + ' = ' + globalExport);
-                }
+            $DIR = new File('./plugins/Thiq/libs/' + name).getParent();
+            var module = {
+                name: name,
+                exports: {}
             }
-            callFn(contents, paramsObject);
+            var result = loader.exports.compileFn(_readFile('./plugins/Thiq/libs/' + name));
+            callFn(result, { module: module, exports: module.exports });
+            addModule(module);
         } else {
             log('Could not locate library script ' + name, 'c');
         }
@@ -136,7 +135,7 @@ function reloadBlockData() {
 }
 
 function initializeCoreModules() {
-    var stdlib = fs.readFileSync('./plugins/Thiq/modules/.bin/stdlib.json');
+    var stdlib = fs.readFileSync((libraryConfig.objects.modulesDir || './plugins/Thiq/modules/') + '.bin/stdlib.json');
     var moduleJSON = JSON.parse(stdlib);
     for (var i = 0; i < moduleJSON.length; i++) {
         try {
@@ -172,11 +171,10 @@ function initializeThiq() {
     reloadBlockData();
     require('ender-chest').initialize();
 
-    libraryConfig = new config('./plugins/Thiq/thiq.json').load();
     log('Loading libraries...', 'd');
     // load the lib files
-    for (var i = 0; i < libraryConfig.libraries.length; i++) {
-        var value = libraryConfig.libraries[i];
+    for (var i = 0; i < libraryConfig.objects.libraries.length; i++) {
+        var value = libraryConfig.objects.libraries[i];
         if (typeof value == 'string') {
             loadLibraryScript(value, findLoaderForFile(value));
         } else if (typeof value == 'object') {

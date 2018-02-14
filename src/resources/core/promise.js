@@ -1,5 +1,5 @@
 //https://github.com/then/promise/blob/master/src/core.js
-
+var os = require('os');
 var async = require('async');
 
 function noop() {}
