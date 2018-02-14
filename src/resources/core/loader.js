@@ -9,6 +9,10 @@ var File = Java.type('java.io.File');
 var registeredLoaders = registeredLoaders || {};
 var Bukkit = org.bukkit.Bukkit;
 
+function importClass(clazz) {
+    return Java.type(clazz);
+}
+
 function _readFile(location) {
     var fIn = new BufferedReader(new InputStreamReader(new FileInputStream(location), "UTF8"));
 
@@ -68,7 +72,7 @@ function _readFile(location) {
         console.log('WARNING: when using loaders, a heap overflow may occur with the command /reload depending on the size of the loader file.', 'c');
     }
 
-    function findLoaderForFile(filename) {
+    global.findLoaderForFile = function(filename) {
         for (var l in registeredLoaders) {
             var loader = registeredLoaders[l];
             if (filename.endsWith(loader.ext)) return loader;
@@ -76,12 +80,19 @@ function _readFile(location) {
         return registeredLoaders.js;
     }
 
+    function getObjectsPropertiesAsArray(obj) {
+        var result = [];
+        for (var field in obj) {
+            if (obj.hasOwnProperty(field)) result.push(obj[field]);
+        }
+        return result;
+    }
+
     global.createWrapperFunction = function(body, argsObject) {
-        var argNames = [], argValues = [];
+        var argNames = [];
         for (var arg in argsObject) {
             if (!argsObject.hasOwnProperty(arg)) continue;
             argNames.push(arg);
-            argValues.push(argsObject[arg]);
         }
         var wrapperHead = '(function(' + arrayToString(argNames) + '){';
         var wrapperBody = body;
@@ -90,11 +101,9 @@ function _readFile(location) {
     }
 
     global.callFn = function(js, argsObject) {
-        $DIR = './plugins/Thiq/';
-        $FILE = false;
         var wrapper = createWrapperFunction(js, argsObject);
         var fn = eval(wrapper);
-        return fn.apply(null, argValues);
+        return fn.apply(global, getObjectsPropertiesAsArray(argsObject));
     }
     
     // set to global so all scripts can use it. Tho idk if that's a good idea :think:

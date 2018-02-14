@@ -68,7 +68,7 @@ public class Thiq extends JavaPlugin {
             try {
                 js.eval("function eval(input) { return engine.eval(input); }");
             } catch (ScriptException ex) {
-                getLogger().log(Level.SEVERE, ex.getMessage() + " \r\n[BEGIN STACKTRACE]\r\n" + ex.getStackTrace() + "\r\n[END STACKTRACE]");
+                getLogger().log(Level.SEVERE, ex.getMessage() + getStackTrace(ex));
             }
             js.eval("function __global__(key, value) { engine.put(key, value); }");
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
@@ -90,6 +90,16 @@ public class Thiq extends JavaPlugin {
                 getLogger().log(Level.SEVERE, null, ex);
             }
         }
+    }
+
+     String getStackTrace(Exception ex) {
+        String result = "\r\n[BEGIN STACKTRACE]\r\nReading file '" + js.get("$FILE") + "'\r\n";
+        StackTraceElement[] trace = ex.getStackTrace();
+        for (StackTraceElement line: trace) {
+            result += line.getClassName() + "." + line.getMethodName() + " (line:" + line.getLineNumber() + ")\r\n";
+        }
+        result += "[END STACKTRACE]\r\n";
+        return result;
     }
     
     public JsCommandExecutor createCommand(String name, String description, String usage, List<String> aliases, JsCommand command) {
@@ -126,11 +136,12 @@ public class Thiq extends JavaPlugin {
                     String result = IOUtils.toString(getResource(file));
                     return js.eval(result);
                 } catch (IOException io) {
-                    getLogger().log(Level.SEVERE, io.getMessage() + " \r\n[BEGIN STACKTRACE]\r\n" + io.getStackTrace() + "\r\n[END STACKTRACE]");
+
+                    getLogger().log(Level.SEVERE, io.getMessage() + getStackTrace(io));
                     return null;
                 }
             } catch (Exception ex) {
-                getLogger().log(Level.SEVERE, ex.getMessage() + " \r\n[BEGIN STACKTRACE]\r\n" + ex.getStackTrace() + "\r\n[END STACKTRACE]");
+                getLogger().log(Level.SEVERE, ex.getMessage() + getStackTrace(ex));
                 return null;
             }
         }

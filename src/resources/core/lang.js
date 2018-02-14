@@ -158,14 +158,6 @@ function constructObject(constructor, args) {
     return new F();
 }
 
-Function.prop('new', {
-    get: function() {
-        return function() {
-            return constructObject(this, arguments);
-        }
-    }
-});
-
 function unwrapObject(target) {
     var value = {};
     for (var field in target) {
