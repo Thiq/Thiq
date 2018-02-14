@@ -33,4 +33,14 @@ Justin Cox – hello@thiq.org
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
+<!-- Markdown link & img dfn's -->
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[wiki]: https://github.com/Thiq/Thiq/wiki
 
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FThiq%2FThiq.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FThiq%2FThiq?ref=badge_large)
