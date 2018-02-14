@@ -92,6 +92,7 @@ public class Thiq extends JavaPlugin {
         }
     }
 
+
      String getStackTrace(Exception ex) {
         String result = "\r\n[BEGIN STACKTRACE]\r\nReading file '" + js.get("$FILE") + "'\r\n";
         StackTraceElement[] trace = ex.getStackTrace();
@@ -133,7 +134,10 @@ public class Thiq extends JavaPlugin {
                 return output;
             } catch (FileNotFoundException ex) {
                 try {
-                    String result = IOUtils.toString(getResource(file));
+                    file = removePrefixSlashes(file);
+                    InputStream resx = getResource(file);
+                    if (resx == null) throw new IOException("Resource doesn't exist: " + file);
+                    String result = IOUtils.toString(resx);
                     return js.eval(result);
                 } catch (IOException io) {
 
@@ -153,6 +157,15 @@ public class Thiq extends JavaPlugin {
         public void loadCoreData() throws ScriptException, IOException {
             String contents = IOUtils.toString(getResource("core/data.json"));
             engine.eval("global.__blockdata = " + contents);
+        }
+
+        String removePrefixSlashes(String input) {
+            int startIndex = 0;
+            for (int i = 0; i < input.length(); i++) {
+                if (input.charAt(i) == '/') startIndex++;
+                else return input.substring(startIndex);
+            }
+            return "";
         }
     }
 }
