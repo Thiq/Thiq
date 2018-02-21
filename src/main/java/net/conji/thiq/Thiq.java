@@ -5,20 +5,15 @@
 package net.conji.thiq;
 
 import java.io.*;
-import java.lang.reflect.Field;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.*;
 import java.util.*;
 import java.util.logging.Level;
 import javax.script.*;
 
-import com.sun.net.httpserver.HttpContext;
-import net.conji.thiq.listeners.*;
 import org.apache.commons.io.IOUtils;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -27,30 +22,9 @@ import org.bukkit.plugin.java.JavaPlugin;
  */
 public class Thiq extends JavaPlugin {
     public ScriptEngine js;
-    HashMap<String, Object> persistence;
-    Listener block;
-    Listener enchantment;
-    Listener entity;
-    Listener inventory;
-    Listener painting;
-    Listener player;
-    Listener server;
-    Listener vehicle;
-    Listener weather;
-    Listener world;
     
     public void onEnable() {
         reload(true);
-
-        block = new BlockListener(this);
-        enchantment = new EnchantmentListener(this);
-        entity = new EntityListener(this);
-        inventory = new InventoryListener(this);
-        player = new PlayerListener(this);
-        server = new ServerListener(this);
-        vehicle = new VehicleListener(this);
-        weather = new WeatherListener(this);
-        world = new WorldListener(this);
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -74,6 +48,7 @@ public class Thiq extends JavaPlugin {
             js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
             js.put("$DIR", "./plugins/Thiq/");
             js.put("$FILE", false);
+            js.put("ThiqListener", ThiqListener.class);
             js.eval("load('plugin.js')");
         } catch (ScriptException ex) {
             getLogger().log(Level.SEVERE, null, ex);
