@@ -14,17 +14,28 @@ import org.apache.commons.io.IOUtils;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.server.PluginEnableEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  *
  * @author Conji
  */
-public class Thiq extends JavaPlugin {
+public class Thiq extends JavaPlugin implements Listener {
     public ScriptEngine js;
     
     public void onEnable() {
         reload(true);
+    }
+
+    @EventHandler
+    public void onPluginEnabled(PluginEnableEvent event) {
+        Thread current = Thread.currentThread();
+        ClassLoader pClassLoader = event.getPlugin().getClass().getClassLoader();
+        current.setContextClassLoader(pClassLoader);
+
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
