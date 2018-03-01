@@ -16,6 +16,58 @@ var File = require('@java.io.File');
 libraryConfig = new Config('./plugins/Thiq/thiq.json');
 libraryConfig.load();
 
+// since event handlers are now set, we can create the class loading hook.
+// If you don't like hacks, don't watch.
+/**
+ * This registers all classes of the loaded plugin and adds them to the JS environment.
+ * Hackish, but it works without external dependencies.
+ */
+eventHandler('server', 'pluginEnable', function(e) {
+    var pClass = e.getPlugin().getClass();
+    var pCl = pClass.getClassLoader();
+    var pf = java.lang.ClassLoader.class.getDeclaredField('classes');
+    pf.setAccessible(true);
+    var classes = pf.get(pCl);
+    for (var i = 0; i < classes.length; i++) {
+        var clazz = classes[i];
+        try {
+            var methods = clazz.methods;
+            var hasInit = false;
+            for (var j = 0; j < methods.length; j++) {
+                methods[j].setAccessible(true);
+                if (methods[j].getName() == '<init>') hasInit = true;
+            }
+            if (clazz == pClass) {
+                createGlobalObjectFromClass(clazz, e.getPlugin());
+            } else if (clazz.isInterface() || !hasInit) {
+                createGlobalObjectFromClass(clazz, clazz);
+            } else {
+                createGlobalObjectFromClass(clazz);
+            }
+        } catch (ex) {
+            console.log('Failed to load class ' + clazz.getName());
+        }
+    }
+});
+
+function createGlobalObjectFromClass(type, instance) {
+    var ns = type.getName();
+    var sects = ns.split('.');
+    var lastNs = global;
+    for (var i = 0; i < sects.length - 1; i++) {
+        var check = sects[i];
+        if (!lastNs[check]) lastNs[check] = {};
+        lastNs = lastNs[check];
+    }
+    if (!lastNs[type.getSimpleName()]) {
+        try {
+            lastNs[type.getSimpleName()] = instance || type.newInstance();
+        } catch(e) {
+            console.log('Failed to register type ' + type.getName());
+        }
+    }
+}
+
 function read_proc() {
     var pb = new java.lang.ProcessBuilder["(java.lang.String[])"](_a(arguments));
     pb.redirectErrorStream(true);

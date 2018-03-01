@@ -1,4 +1,6 @@
 # Changelog
+## v2.0.1
+- Added plugin class loading for dependency plugins that are otherwise locked off from Bukkit
 ## v2.0.0
 - Allowed for all files to be embedded. It will check first locally and if it doesn't exist, it will load embedded scripts.
 - `require` is now file relative.
