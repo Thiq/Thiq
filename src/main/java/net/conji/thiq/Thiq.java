@@ -10,6 +10,8 @@ import java.util.*;
 import java.util.logging.Level;
 import javax.script.*;
 
+import jdk.nashorn.api.scripting.NashornScriptEngine;
+import jdk.nashorn.api.scripting.NashornScriptEngineFactory;
 import org.apache.commons.io.IOUtils;
 import org.bukkit.Server;
 import org.bukkit.command.Command;
@@ -24,10 +26,14 @@ import org.bukkit.plugin.java.JavaPlugin;
  * @author Conji
  */
 public class Thiq extends JavaPlugin implements Listener {
+    boolean isRunningES6 = false;
+
     public ScriptEngine js;
-    
     public void onEnable() {
         reload(true);
+    }
+    public boolean isES6() {
+        return this.isRunningES6;
     }
 
     @EventHandler
@@ -35,7 +41,6 @@ public class Thiq extends JavaPlugin implements Listener {
         Thread current = Thread.currentThread();
         ClassLoader pClassLoader = event.getPlugin().getClass().getClassLoader();
         current.setContextClassLoader(pClassLoader);
-
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -44,10 +49,22 @@ public class Thiq extends JavaPlugin implements Listener {
         return true;
     }
 
+    public void log(Level level, String content) {
+        getLogger().log(level, content);
+    }
+
     void initializeJsEngine() {
         try {
-            ScriptEngineManager sem = new ScriptEngineManager();
-            js = sem.getEngineByName("JavaScript");
+            try {
+                js = new NashornScriptEngineFactory().getScriptEngine("--language=es6");
+                this.isRunningES6 = true;
+                log(Level.INFO, "Detected Java version higher than 1.8. Using ES6 engine.");
+            } catch (Exception ex) {
+                // this will throw if we're on Java 1.8, so lets fallback to the default JS engine
+                js = new ScriptEngineManager().getEngineByName("JavaScript");
+                this.isRunningES6 = false;
+                log(Level.INFO, "Not running Java version higher than 1.8. Falling back to default JS engine.");
+            }
             js.put("loader", new ScriptLoader(js));
             js.put("engine", js);
             try {
