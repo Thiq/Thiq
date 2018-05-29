@@ -31,14 +31,6 @@ Once your plugin is installed and running, you can test code by using `/js [code
 * 1.0.
    * Initial Release
   
-## Planned Released
-* 2.1.
-   * Allow for headless testing of scripts without clients and full server loading
-   * ES6 (hopefully)
-   * Package management and `tpm` (Thiq Package Manager)
-   * HTTP/S libraries for requests
-   * Consider a new async/await system (ES5.1 doesn't really allow for it, but we have Promises)
-   
 ## Meta
 
 Justin Cox – [mailto:hello@thiq.org](hello@thiq.org)
