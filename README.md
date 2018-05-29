@@ -15,6 +15,7 @@
 Once your plugin is installed and running, you can test code by using `/js [codeSnippet]`. Documentation on each repository will be hosted on the main website. You can hot reload the script by using `/reloadjs` or by installing the `file-watcher` module. To install more modules for your code to use, simply use `/tpm install [module-name]`
 
 ## Release History
+<<<<<<< HEAD
 
 * 3.0.0
     * Use NodeJS style bootstrapping for internal files
@@ -27,12 +28,27 @@ Once your plugin is installed and running, you can test code by using `/js [code
     * Add CommonJS style modules
     * Cleanup global pollution
 
+=======
+* 2.0.
+   * Fully recode Thiq within Java 8 using Nashorn
+   * Allow for modules and module loading (using CommonJS style `require`)
+   * Allow for additional language compilers (i.e. CoffeeScript, TypeScript, etc)
+   * Update and patch bugs
+>>>>>>> d231abb476177fb4b571130e681ed34ab42b8dca
 * 1.0.
-    * Initial Release
-
+   * Initial Release
+  
+## Planned Released
+* 2.1.
+   * Allow for headless testing of scripts without clients and full server loading
+   * ES6 (hopefully)
+   * Package management and `tpm` (Thiq Package Manager)
+   * HTTP/S libraries for requests
+   * Consider a new async/await system (ES5.1 doesn't really allow for it, but we have Promises)
+   
 ## Meta
 
-Justin Cox – hello@thiq.org
+Justin Cox – [mailto:hello@thiq.org](hello@thiq.org)
 
 [https://github.com/Conji](https://github.com/Conji/)
 
