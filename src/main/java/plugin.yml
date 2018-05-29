@@ -1,10 +1,9 @@
 main: net.conji.thiq.Thiq
 name: Thiq
-version: 2.0.2
+version: 3.0.0
 description: NodeJS-like environment for Bukkit/Spigot.
-softdepend: [Spout]
 commands:
   reloadjs:
     usage: /<command>
-    description: Reloads the javascript environment (except persistence. add -p for that)
+    description: Reloads the JavaScript environment.
     permission: thiq.reload

@@ -10,7 +10,6 @@ import org.bukkit.plugin.EventExecutor;
 public class ThiqListener implements Listener {
 
     public EventExecutor getExecutor(ScriptObjectMirror jsFunction) {
-        // TODO: figure out how to call the jsFunction in the execute override
         return (listener, event) -> {
             jsFunction.call(jsFunction, event);
         };

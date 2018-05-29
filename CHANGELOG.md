@@ -1,4 +1,14 @@
 # Changelog
+
+## v3.0.0
+
+- Move `core` folder to `lib/internal` for NodeJS style consistency.
+- Demand loading of `lib/internal/bootstrap/loader.js` instead of a configured entry point. The configured entry point will
+be ran after the internal environment is finished loading.
+- Localize all scripts to prevent global pollution.
+- Work on Thiq Package Manager.
+- Allow versioning of modules.
+
 ## v2.0.1
 - Added plugin class loading for dependency plugins that are otherwise locked off from Bukkit
 ## v2.0.0

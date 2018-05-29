@@ -30,7 +30,7 @@ public class Thiq extends JavaPlugin implements Listener {
 
     public ScriptEngine js;
     public void onEnable() {
-        reload(true);
+        reload();
     }
     public boolean isES6() {
         return this.isRunningES6;
@@ -44,7 +44,7 @@ public class Thiq extends JavaPlugin implements Listener {
     }
     
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        reload(false);
+        reload();
         sender.sendMessage("JavaScript has been reloaded");
         return true;
     }
@@ -58,52 +58,31 @@ public class Thiq extends JavaPlugin implements Listener {
             try {
                 js = new NashornScriptEngineFactory().getScriptEngine("--language=es6");
                 this.isRunningES6 = true;
-                log(Level.INFO, "Detected Java version higher than 1.8. Using ES6 engine.");
+                log(Level.INFO, "Detected Java version higher than 8. Using ES6 engine.");
             } catch (Exception ex) {
                 // this will throw if we're on Java 1.8, so lets fallback to the default JS engine
-                js = new ScriptEngineManager().getEngineByName("JavaScript");
+                this.js = new ScriptEngineManager().getEngineByName("JavaScript");
                 this.isRunningES6 = false;
-                log(Level.INFO, "Not running Java version higher than 1.8. Falling back to default JS engine.");
+                log(Level.INFO, "Java version lower than 9 detected. ECMAScript 2015 features will be disabled.");
             }
-            js.put("loader", new ScriptLoader(js));
-            js.put("engine", js);
+            this.js.put("loader", new ScriptLoader(js));
+            this.js.put("engine", this.js);
+            this.js.put("isES6", this.isES6());
             try {
-                js.eval("function eval(input) { return engine.eval(input); }");
+                this.js.eval("function eval(input) { return engine.eval(input); }");
             } catch (ScriptException ex) {
-                getLogger().log(Level.SEVERE, ex.getMessage() + getStackTrace(ex));
+                // fail quietly
             }
-            js.eval("function __global__(key, value) { engine.put(key, value); }");
-            js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
-            js.put("$DIR", "./plugins/Thiq/");
-            js.put("$FILE", false);
-            js.put("ThiqListener", ThiqListener.class);
-            js.eval("load('plugin.js')");
+            this.js.eval("function load(file){return loader.load(file);}function getServer(){return loader.getServer();}");
+            this.js.put("ThiqListener", ThiqListener.class);
+            this.js.eval("load('lib/internal/bootstrap/loader.js')");
         } catch (ScriptException ex) {
-            getLogger().log(Level.SEVERE, null, ex);
+            this.getLogger().log(Level.SEVERE, "An error occurred when initializing the JavaScript engine.", ex);
         }
     }
     
-    void reload(boolean fullReload) {
-        if (fullReload) {
-            initializeJsEngine();
-        } else {
-            try {
-                js.eval("__reloadJs()");
-            } catch (ScriptException ex) {
-                getLogger().log(Level.SEVERE, null, ex);
-            }
-        }
-    }
-
-
-     String getStackTrace(Exception ex) {
-        String result = "\r\n[BEGIN STACKTRACE]\r\nReading file '" + js.get("$FILE") + "'\r\n";
-        StackTraceElement[] trace = ex.getStackTrace();
-        for (StackTraceElement line: trace) {
-            result += line.getClassName() + "." + line.getMethodName() + " (line:" + line.getLineNumber() + ")\r\n";
-        }
-        result += "[END STACKTRACE]\r\n";
-        return result;
+    void reload() {
+        this.initializeJsEngine();
     }
     
     public JsCommandExecutor createCommand(String name, String description, String usage, List<String> aliases, JsCommand command) {
@@ -121,14 +100,14 @@ public class Thiq extends JavaPlugin implements Listener {
             Invocable inv = (Invocable) js;
             return inv.getInterface(o, i);
         }
-        public Server getServer() {return Thiq.this.getServer();}
-        public Object load(String file) throws FileNotFoundException, ScriptException {
+        public Server getServer() { return Thiq.this.getServer(); }
+        public Object load(String file) throws ScriptException {
             file = file.replace('\\', '/');
             try {
                 String pFile = "./plugins/Thiq/" + file;
                 InputStreamReader stream = new InputStreamReader(new FileInputStream(pFile), StandardCharsets.UTF_8);
                 BufferedReader buffer = new BufferedReader(stream);
-                String line = null;
+                String line;
                 String result = "";
                 while ((line = buffer.readLine()) != null) {
                     result += line + "\r\n";
@@ -143,23 +122,11 @@ public class Thiq extends JavaPlugin implements Listener {
                     String result = IOUtils.toString(resx);
                     return js.eval(result);
                 } catch (IOException io) {
-
-                    getLogger().log(Level.SEVERE, io.getMessage() + getStackTrace(io));
                     return null;
                 }
             } catch (Exception ex) {
-                getLogger().log(Level.SEVERE, ex.getMessage() + getStackTrace(ex));
                 return null;
             }
-        }
-
-        public Object loadCoreFile(String name) throws ScriptException, IOException {
-            return load("/core/" + name + ".js");
-        }
-
-        public void loadCoreData() throws ScriptException, IOException {
-            String contents = IOUtils.toString(getResource("core/data.json"));
-            engine.eval("global.__blockdata = " + contents);
         }
 
         String removePrefixSlashes(String input) {

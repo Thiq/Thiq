@@ -16,6 +16,17 @@ Once your plugin is installed and running, you can test code by using `/js [code
 
 ## Release History
 
+* 3.0.0
+    * Use NodeJS style bootstrapping for internal files
+    * Begin work on package management
+    * Use `package.json` as config rather than `plugin.yml`
+    * Essentially a complete rework of how the Thiq environment runs
+
+* 2.0.
+    * Internalize some files
+    * Add CommonJS style modules
+    * Cleanup global pollution
+
 * 1.0.
     * Initial Release
 
