@@ -15,7 +15,6 @@
 Once your plugin is installed and running, you can test code by using `/js [codeSnippet]`. Documentation on each repository will be hosted on the main website. You can hot reload the script by using `/reloadjs` or by installing the `file-watcher` module. To install more modules for your code to use, simply use `/tpm install [module-name]`
 
 ## Release History
-<<<<<<< HEAD
 
 * 3.0.0
     * Use NodeJS style bootstrapping for internal files
@@ -24,17 +23,11 @@ Once your plugin is installed and running, you can test code by using `/js [code
     * Essentially a complete rework of how the Thiq environment runs
 
 * 2.0.
-    * Internalize some files
-    * Add CommonJS style modules
-    * Cleanup global pollution
-
-=======
-* 2.0.
    * Fully recode Thiq within Java 8 using Nashorn
    * Allow for modules and module loading (using CommonJS style `require`)
    * Allow for additional language compilers (i.e. CoffeeScript, TypeScript, etc)
    * Update and patch bugs
->>>>>>> d231abb476177fb4b571130e681ed34ab42b8dca
+
 * 1.0.
    * Initial Release
   
